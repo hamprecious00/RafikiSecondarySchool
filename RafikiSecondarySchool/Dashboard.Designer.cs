@@ -37,6 +37,7 @@ namespace RafikiSecondarySchool
             this.btnaddstudent = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtuser = new System.Windows.Forms.TextBox();
+            this.btnview = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@ namespace RafikiSecondarySchool
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.btnview);
             this.groupBox1.Controls.Add(this.btnreportcard);
             this.groupBox1.Controls.Add(this.btnmarkssheet);
             this.groupBox1.Controls.Add(this.btnmarksentry);
@@ -63,7 +65,7 @@ namespace RafikiSecondarySchool
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(30, 68);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(296, 372);
+            this.groupBox1.Size = new System.Drawing.Size(296, 409);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Options";
@@ -129,6 +131,16 @@ namespace RafikiSecondarySchool
             this.txtuser.TabIndex = 4;
             this.txtuser.TextChanged += new System.EventHandler(this.txtuser_TextChanged);
             // 
+            // btnview
+            // 
+            this.btnview.Location = new System.Drawing.Point(29, 330);
+            this.btnview.Name = "btnview";
+            this.btnview.Size = new System.Drawing.Size(223, 49);
+            this.btnview.TabIndex = 6;
+            this.btnview.Text = "View Students";
+            this.btnview.UseVisualStyleBackColor = true;
+            this.btnview.Click += new System.EventHandler(this.btnview_Click);
+            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,5 +173,6 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.Button btnaddstudent;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtuser;
+        private System.Windows.Forms.Button btnview;
     }
 }

@@ -38,14 +38,22 @@ namespace RafikiSecondarySchool
 
         private void btnmarksentry_Click(object sender, EventArgs e)
         {
-            EnterDetailsForm enter = new EnterDetailsForm();
+            EnterMarksForm enter = new EnterMarksForm();
             enter.Show();
+            this.Hide();
         }
 
         private void btnmarkssheet_Click(object sender, EventArgs e)
         {
             SheetDetailsForm sheet = new SheetDetailsForm();
             sheet.Show();
+        }
+
+        private void btnview_Click(object sender, EventArgs e)
+        {
+            StudentlistForm student = new StudentlistForm();
+            student.Show();
+            this.Hide();
         }
     }
 }

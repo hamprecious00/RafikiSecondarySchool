@@ -29,14 +29,6 @@ namespace RafikiSecondarySchool
             this.Hide();
         }
 
- //       private void btnbrowse_Click(object sender, EventArgs e)
- //     {
- //           OpenFileDialog openFile = new OpenFileDialog();
- //           if(openFile.ShowDialog() == DialogResult.OK)
- //           {
- //               studentpic.Image = new Bitmap(openFile.FileName);
- //           }
- //       }
 
         private void label9_Click(object sender, EventArgs e)
         {
@@ -48,10 +40,10 @@ namespace RafikiSecondarySchool
             try
             {
                 // Check if the image is loaded
-               // if (studentpic.Image == null)
+                // if (studentpic.Image == null)
                 //{
-                  //  MessageBox.Show("Please upload an image.");
-                    //return;
+                //  MessageBox.Show("Please upload an image.");
+                //return;
                 //}
 
                 // Open the connection
@@ -75,12 +67,12 @@ namespace RafikiSecondarySchool
                 cmd.Parameters.AddWithValue("@Admno", txtadm.Text);
                 cmd.Parameters.AddWithValue("@StudentName", txtstudentname.Text);
                 cmd.Parameters.AddWithValue("@Gender", cmbgender.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("@StudentForm", txtstudentform.Text);
-                cmd.Parameters.AddWithValue("@StudentClass", txtstudentclass.Text);
+                cmd.Parameters.AddWithValue("@StudentForm", cbostudentform.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@StudentClass", cbostudentclass.SelectedItem.ToString());
                 cmd.Parameters.AddWithValue("@DateofBirth", DateTime.Parse(this.dateofbirth.Text));
-              //  cmd.Parameters.AddWithValue("@Photo", studentpic.Image);
+                //  cmd.Parameters.AddWithValue("@Photo", studentpic.Image);
                 cmd.Parameters.AddWithValue("@CurrentYear", txtcurrentyear.Text);
-                cmd.Parameters.AddWithValue("@Semester", txtsemester.Text);
+                cmd.Parameters.AddWithValue("@Semester", cbosemester.SelectedItem.ToString());
 
                 // Execute the command
                 cmd.ExecuteNonQuery();
@@ -106,11 +98,23 @@ namespace RafikiSecondarySchool
         {
             txtadm.Text = string.Empty;
             txtstudentname.Text = string.Empty;
-            txtstudentform.Text = String.Empty;
-            txtstudentclass.Text = String.Empty;
-            txtsemester.Text = String.Empty;
+            cbostudentclass.SelectedIndex = -1;
+            cbostudentform.SelectedIndex = -1;
+            cbosemester.SelectedIndex = -1;
             txtcurrentyear.Text = String.Empty;
             cmbgender.SelectedIndex = -1;
+
+            // Clear the checkboxes
+            //sub4.Checked = false;
+            //sub7.Checked = false;
+            //sub8.Checked = false;
+            //sub9.Checked = false;
+            //sub11.Checked = false;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

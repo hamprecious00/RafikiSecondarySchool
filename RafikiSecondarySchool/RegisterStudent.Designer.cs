@@ -38,10 +38,7 @@ namespace RafikiSecondarySchool
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtstudentform = new System.Windows.Forms.TextBox();
             this.txtstudentname = new System.Windows.Forms.TextBox();
-            this.txtstudentclass = new System.Windows.Forms.TextBox();
-            this.txtsemester = new System.Windows.Forms.TextBox();
             this.btnback = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
             this.btnnew = new System.Windows.Forms.Button();
@@ -50,6 +47,9 @@ namespace RafikiSecondarySchool
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbgender = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.cbostudentform = new System.Windows.Forms.ComboBox();
+            this.cbostudentclass = new System.Windows.Forms.ComboBox();
+            this.cbosemester = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,9 +79,9 @@ namespace RafikiSecondarySchool
             // 
             this.btnregister.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnregister.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnregister.Location = new System.Drawing.Point(500, 59);
+            this.btnregister.Location = new System.Drawing.Point(573, 62);
             this.btnregister.Name = "btnregister";
-            this.btnregister.Size = new System.Drawing.Size(147, 55);
+            this.btnregister.Size = new System.Drawing.Size(247, 58);
             this.btnregister.TabIndex = 2;
             this.btnregister.Text = "Register";
             this.btnregister.UseVisualStyleBackColor = false;
@@ -153,16 +153,6 @@ namespace RafikiSecondarySchool
             this.label7.TabIndex = 9;
             this.label7.Text = "Student Name";
             // 
-            // txtstudentform
-            // 
-            this.txtstudentform.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtstudentform.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtstudentform.Location = new System.Drawing.Point(124, 150);
-            this.txtstudentform.Multiline = true;
-            this.txtstudentform.Name = "txtstudentform";
-            this.txtstudentform.Size = new System.Drawing.Size(248, 32);
-            this.txtstudentform.TabIndex = 11;
-            // 
             // txtstudentname
             // 
             this.txtstudentname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -173,30 +163,10 @@ namespace RafikiSecondarySchool
             this.txtstudentname.Size = new System.Drawing.Size(248, 32);
             this.txtstudentname.TabIndex = 12;
             // 
-            // txtstudentclass
-            // 
-            this.txtstudentclass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtstudentclass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtstudentclass.Location = new System.Drawing.Point(124, 188);
-            this.txtstudentclass.Multiline = true;
-            this.txtstudentclass.Name = "txtstudentclass";
-            this.txtstudentclass.Size = new System.Drawing.Size(248, 32);
-            this.txtstudentclass.TabIndex = 13;
-            // 
-            // txtsemester
-            // 
-            this.txtsemester.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtsemester.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsemester.Location = new System.Drawing.Point(124, 306);
-            this.txtsemester.Multiline = true;
-            this.txtsemester.Name = "txtsemester";
-            this.txtsemester.Size = new System.Drawing.Size(248, 32);
-            this.txtsemester.TabIndex = 14;
-            // 
             // btnback
             // 
             this.btnback.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnback.Location = new System.Drawing.Point(572, 401);
+            this.btnback.Location = new System.Drawing.Point(812, 418);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(75, 23);
             this.btnback.TabIndex = 15;
@@ -208,9 +178,9 @@ namespace RafikiSecondarySchool
             // 
             this.btnclear.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnclear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclear.Location = new System.Drawing.Point(500, 209);
+            this.btnclear.Location = new System.Drawing.Point(574, 232);
             this.btnclear.Name = "btnclear";
-            this.btnclear.Size = new System.Drawing.Size(147, 55);
+            this.btnclear.Size = new System.Drawing.Size(246, 58);
             this.btnclear.TabIndex = 16;
             this.btnclear.Text = "Clear";
             this.btnclear.UseVisualStyleBackColor = false;
@@ -220,9 +190,9 @@ namespace RafikiSecondarySchool
             // 
             this.btnnew.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnnew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnnew.Location = new System.Drawing.Point(500, 133);
+            this.btnnew.Location = new System.Drawing.Point(573, 149);
             this.btnnew.Name = "btnnew";
-            this.btnnew.Size = new System.Drawing.Size(147, 55);
+            this.btnnew.Size = new System.Drawing.Size(247, 58);
             this.btnnew.TabIndex = 17;
             this.btnnew.Text = "New";
             this.btnnew.UseVisualStyleBackColor = false;
@@ -250,6 +220,9 @@ namespace RafikiSecondarySchool
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.groupBox1.Controls.Add(this.cbosemester);
+            this.groupBox1.Controls.Add(this.cbostudentclass);
+            this.groupBox1.Controls.Add(this.cbostudentform);
             this.groupBox1.Controls.Add(this.cmbgender);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtadm);
@@ -258,12 +231,9 @@ namespace RafikiSecondarySchool
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dateofbirth);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtstudentform);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtsemester);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtstudentclass);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -297,12 +267,50 @@ namespace RafikiSecondarySchool
             this.label9.Text = "Gender";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // cbostudentform
+            // 
+            this.cbostudentform.FormattingEnabled = true;
+            this.cbostudentform.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cbostudentform.Location = new System.Drawing.Point(124, 158);
+            this.cbostudentform.Name = "cbostudentform";
+            this.cbostudentform.Size = new System.Drawing.Size(248, 24);
+            this.cbostudentform.TabIndex = 22;
+            // 
+            // cbostudentclass
+            // 
+            this.cbostudentclass.FormattingEnabled = true;
+            this.cbostudentclass.Items.AddRange(new object[] {
+            "E",
+            "W",
+            "N",
+            "S"});
+            this.cbostudentclass.Location = new System.Drawing.Point(124, 196);
+            this.cbostudentclass.Name = "cbostudentclass";
+            this.cbostudentclass.Size = new System.Drawing.Size(248, 24);
+            this.cbostudentclass.TabIndex = 23;
+            // 
+            // cbosemester
+            // 
+            this.cbosemester.FormattingEnabled = true;
+            this.cbosemester.Items.AddRange(new object[] {
+            "Term 1",
+            "Term 2",
+            "Term 3"});
+            this.cbosemester.Location = new System.Drawing.Point(124, 319);
+            this.cbosemester.Name = "cbosemester";
+            this.cbosemester.Size = new System.Drawing.Size(248, 24);
+            this.cbosemester.TabIndex = 24;
+            // 
             // RegisterStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(708, 450);
+            this.ClientSize = new System.Drawing.Size(899, 450);
             this.Controls.Add(this.btnnew);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnback);
@@ -329,10 +337,7 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtstudentform;
         private System.Windows.Forms.TextBox txtstudentname;
-        private System.Windows.Forms.TextBox txtstudentclass;
-        private System.Windows.Forms.TextBox txtsemester;
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Button btnnew;
@@ -341,5 +346,8 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbgender;
+        private System.Windows.Forms.ComboBox cbosemester;
+        private System.Windows.Forms.ComboBox cbostudentclass;
+        private System.Windows.Forms.ComboBox cbostudentform;
     }
 }
