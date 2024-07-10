@@ -44,6 +44,8 @@ namespace RafikiSecondarySchool
                 SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Exam]
                 ([Adm]
                 ,[Indexno]
+                ,[Form]
+                ,[Term]
                 ,[Math]
                 ,[Eng]
                 ,[Kis]
@@ -57,11 +59,13 @@ namespace RafikiSecondarySchool
                 ,[Business]
                 ,[Ict])
                 VALUES
-                (@Adm, @Indexno, @Math, @Eng, @Kis, @Bio, @Chem, @Phy, @Geo, @Cre, @Hist, @Agrics, @Business, @Ict)", conn);
+                (@Adm, @Indexno, @Form, @Term, @Math, @Eng, @Kis, @Bio, @Chem, @Phy, @Geo, @Cre, @Hist, @Agrics, @Business, @Ict)", conn);
 
                 // Add parameters to the command
                 cmd.Parameters.AddWithValue("@Adm", txtadm.Text);
                 cmd.Parameters.AddWithValue("@Indexno", txtindexno.Text);
+                cmd.Parameters.AddWithValue("@Form", cboform.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@Term", cboterm.SelectedItem.ToString());
                 cmd.Parameters.AddWithValue("@Math", txtmath.Text);
                 cmd.Parameters.AddWithValue("@Eng", txteng.Text);
                 cmd.Parameters.AddWithValue("@Kis", txtkis.Text);
@@ -98,6 +102,8 @@ namespace RafikiSecondarySchool
             txtindexno.Text = string.Empty;
             txtmath.Text = string.Empty;
             txtict.Text = string.Empty;
+            cboform.SelectedIndex = -1;
+            cboterm.SelectedIndex = -1;
             txtbs.Text = string.Empty;
             txtagrics.Text = string.Empty;
             txthist.Text = string.Empty;
@@ -108,6 +114,30 @@ namespace RafikiSecondarySchool
             txtbio.Text = string.Empty;
             txtkis.Text = string.Empty;
             txteng.Text = string.Empty;
+        }
+
+        private void btnconfirm_Click(object sender, EventArgs e)
+        {
+            //string txtAdmValue = txtadm.Text;
+            //string connectionString = "Data Source=DESKTOP-4ROF1AO/SQLEXPRESS;Initial Catalog=School;Integrated Security=True";
+            //using (SqlConnection connection = new SqlConnection(connectionString))
+            //{
+            //    //connection.Open();
+            //    string query = "SELECT Name FROM Student WHERE adm = @Adm";
+            //    using (SqlCommand command = new SqlCommand(query, connection))
+            //    {
+            //        command.Parameters.AddWithValue("@Adm", txtAdmValue);
+            //        //SqlDataReader reader = command.ExecuteReader();
+            //        if (reader.Read())
+            //        {
+            //            lblname.Text = reader["Name"].ToString();
+            //        }
+            //        else
+            //        {
+            //            lblname.Text = "Student not found.";
+            //        }
+            //    }
+            //}
         }
     }
 }

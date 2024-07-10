@@ -31,6 +31,19 @@ namespace RafikiSecondarySchool
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnterMarksForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cboterm = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.cboform = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.lblname = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.btnconfirm = new System.Windows.Forms.Button();
+            this.lblgrade = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.lblavg = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.lbltotal = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.txtindexno = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtadm = new System.Windows.Forms.TextBox();
@@ -62,21 +75,12 @@ namespace RafikiSecondarySchool
             this.btnback = new System.Windows.Forms.Button();
             this.btnentermarks = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.lbltotal = new System.Windows.Forms.Label();
-            this.lblavg = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.lblgrade = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.btnconfirm = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,7 +89,11 @@ namespace RafikiSecondarySchool
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.cboterm);
+            this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.cboform);
+            this.panel1.Controls.Add(this.label23);
+            this.panel1.Controls.Add(this.lblname);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.btnconfirm);
             this.panel1.Controls.Add(this.lblgrade);
@@ -128,20 +136,149 @@ namespace RafikiSecondarySchool
             this.panel1.Size = new System.Drawing.Size(788, 320);
             this.panel1.TabIndex = 1;
             // 
+            // cboterm
+            // 
+            this.cboterm.FormattingEnabled = true;
+            this.cboterm.Items.AddRange(new object[] {
+            "Term 1",
+            "Term 2",
+            "Term 3"});
+            this.cboterm.Location = new System.Drawing.Point(630, 72);
+            this.cboterm.Name = "cboterm";
+            this.cboterm.Size = new System.Drawing.Size(109, 33);
+            this.cboterm.TabIndex = 39;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(562, 79);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(62, 25);
+            this.label24.TabIndex = 38;
+            this.label24.Text = "Term:";
+            // 
+            // cboform
+            // 
+            this.cboform.FormattingEnabled = true;
+            this.cboform.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cboform.Location = new System.Drawing.Point(494, 73);
+            this.cboform.Name = "cboform";
+            this.cboform.Size = new System.Drawing.Size(52, 33);
+            this.cboform.TabIndex = 37;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(426, 80);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(62, 25);
+            this.label23.TabIndex = 36;
+            this.label23.Text = "Form:";
+            // 
+            // lblname
+            // 
+            this.lblname.AutoSize = true;
+            this.lblname.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblname.Location = new System.Drawing.Point(157, 20);
+            this.lblname.Name = "lblname";
+            this.lblname.Size = new System.Drawing.Size(28, 30);
+            this.lblname.TabIndex = 35;
+            this.lblname.Text = "...";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(6, 20);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(154, 30);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "Student Name:";
+            // 
+            // btnconfirm
+            // 
+            this.btnconfirm.Location = new System.Drawing.Point(679, 20);
+            this.btnconfirm.Name = "btnconfirm";
+            this.btnconfirm.Size = new System.Drawing.Size(106, 34);
+            this.btnconfirm.TabIndex = 29;
+            this.btnconfirm.Text = "Confirm";
+            this.btnconfirm.UseVisualStyleBackColor = true;
+            this.btnconfirm.Click += new System.EventHandler(this.btnconfirm_Click);
+            // 
+            // lblgrade
+            // 
+            this.lblgrade.AutoSize = true;
+            this.lblgrade.Location = new System.Drawing.Point(671, 220);
+            this.lblgrade.Name = "lblgrade";
+            this.lblgrade.Size = new System.Drawing.Size(23, 25);
+            this.lblgrade.TabIndex = 33;
+            this.lblgrade.Text = "0";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(600, 220);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(79, 25);
+            this.label20.TabIndex = 32;
+            this.label20.Text = "GRADE:";
+            // 
+            // lblavg
+            // 
+            this.lblavg.AutoSize = true;
+            this.lblavg.Location = new System.Drawing.Point(671, 177);
+            this.lblavg.Name = "lblavg";
+            this.lblavg.Size = new System.Drawing.Size(23, 25);
+            this.lblavg.TabIndex = 31;
+            this.lblavg.Text = "0";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(625, 177);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(54, 25);
+            this.label18.TabIndex = 30;
+            this.label18.Text = "AVG:";
+            // 
+            // lbltotal
+            // 
+            this.lbltotal.AutoSize = true;
+            this.lbltotal.Location = new System.Drawing.Point(671, 136);
+            this.lbltotal.Name = "lbltotal";
+            this.lbltotal.Size = new System.Drawing.Size(23, 25);
+            this.lbltotal.TabIndex = 29;
+            this.lbltotal.Text = "0";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(609, 136);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 25);
+            this.label15.TabIndex = 28;
+            this.label15.Text = "TOTAL:";
+            // 
             // txtindexno
             // 
             this.txtindexno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtindexno.Location = new System.Drawing.Point(382, 73);
+            this.txtindexno.Location = new System.Drawing.Point(328, 72);
             this.txtindexno.Multiline = true;
             this.txtindexno.Name = "txtindexno";
-            this.txtindexno.Size = new System.Drawing.Size(164, 33);
+            this.txtindexno.Size = new System.Drawing.Size(92, 33);
             this.txtindexno.TabIndex = 27;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(277, 75);
+            this.label14.Location = new System.Drawing.Point(230, 77);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(99, 25);
             this.label14.TabIndex = 26;
@@ -153,14 +290,14 @@ namespace RafikiSecondarySchool
             this.txtadm.Location = new System.Drawing.Point(148, 73);
             this.txtadm.Multiline = true;
             this.txtadm.Name = "txtadm";
-            this.txtadm.Size = new System.Drawing.Size(112, 33);
+            this.txtadm.Size = new System.Drawing.Size(67, 33);
             this.txtadm.TabIndex = 25;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(14, 75);
+            this.label13.Location = new System.Drawing.Point(6, 75);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(132, 25);
             this.label13.TabIndex = 24;
@@ -419,89 +556,6 @@ namespace RafikiSecondarySchool
             this.btnclear.UseVisualStyleBackColor = false;
             this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(609, 136);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 25);
-            this.label15.TabIndex = 28;
-            this.label15.Text = "TOTAL:";
-            // 
-            // lbltotal
-            // 
-            this.lbltotal.AutoSize = true;
-            this.lbltotal.Location = new System.Drawing.Point(671, 136);
-            this.lbltotal.Name = "lbltotal";
-            this.lbltotal.Size = new System.Drawing.Size(23, 25);
-            this.lbltotal.TabIndex = 29;
-            this.lbltotal.Text = "0";
-            // 
-            // lblavg
-            // 
-            this.lblavg.AutoSize = true;
-            this.lblavg.Location = new System.Drawing.Point(671, 177);
-            this.lblavg.Name = "lblavg";
-            this.lblavg.Size = new System.Drawing.Size(23, 25);
-            this.lblavg.TabIndex = 31;
-            this.lblavg.Text = "0";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(625, 177);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(54, 25);
-            this.label18.TabIndex = 30;
-            this.label18.Text = "AVG:";
-            // 
-            // lblgrade
-            // 
-            this.lblgrade.AutoSize = true;
-            this.lblgrade.Location = new System.Drawing.Point(671, 220);
-            this.lblgrade.Name = "lblgrade";
-            this.lblgrade.Size = new System.Drawing.Size(23, 25);
-            this.lblgrade.TabIndex = 33;
-            this.lblgrade.Text = "0";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(600, 220);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(79, 25);
-            this.label20.TabIndex = 32;
-            this.label20.Text = "GRADE:";
-            // 
-            // btnconfirm
-            // 
-            this.btnconfirm.Location = new System.Drawing.Point(605, 72);
-            this.btnconfirm.Name = "btnconfirm";
-            this.btnconfirm.Size = new System.Drawing.Size(106, 34);
-            this.btnconfirm.TabIndex = 29;
-            this.btnconfirm.Text = "Confirm";
-            this.btnconfirm.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(63, 20);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(154, 30);
-            this.label16.TabIndex = 34;
-            this.label16.Text = "Student Name:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(214, 20);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(28, 30);
-            this.label17.TabIndex = 35;
-            this.label17.Text = "...";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -516,15 +570,14 @@ namespace RafikiSecondarySchool
             this.panel2.Size = new System.Drawing.Size(789, 110);
             this.panel2.TabIndex = 29;
             // 
-            // pictureBox1
+            // dateTimePicker1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(55, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 95);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(586, 87);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 7;
             // 
             // label19
             // 
@@ -557,14 +610,15 @@ namespace RafikiSecondarySchool
             this.label22.TabIndex = 4;
             this.label22.Text = "RAFIKI SECONDARY SCHOOL";
             // 
-            // dateTimePicker1
+            // pictureBox1
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(586, 87);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 7;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(55, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 95);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // EnterMarksForm
             // 
@@ -629,7 +683,7 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label lbltotal;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblname;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnconfirm;
         private System.Windows.Forms.Panel panel2;
@@ -638,5 +692,9 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.ComboBox cboterm;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ComboBox cboform;
+        private System.Windows.Forms.Label label23;
     }
 }
