@@ -164,12 +164,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SchoolDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SheetDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SheetDetails.Designer.cs">
-      <DependentUpon>SheetDetails.cs</DependentUpon>
-    </Compile>
     <Compile Include="Studentlist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +182,9 @@
     <EmbeddedResource Include="LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MarksSheet.resx">
+      <DependentUpon>MarksSheet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -199,9 +196,6 @@
     </Compile>
     <EmbeddedResource Include="RegisterStudent.resx">
       <DependentUpon>RegisterStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SheetDetails.resx">
-      <DependentUpon>SheetDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Studentlist.resx">
       <DependentUpon>Studentlist.cs</DependentUpon>

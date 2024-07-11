@@ -10,11 +10,28 @@ using System.Windows.Forms;
 
 namespace RafikiSecondarySchool
 {
-    public partial class MarksSheet : Form
+    public partial class MarksSheetForm : Form
     {
-        public MarksSheet()
+        public MarksSheetForm()
         {
             InitializeComponent();
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DashboardForm d = new DashboardForm();
+            d.Show();
+            this.Hide();
         }
     }
 }

@@ -45,8 +45,9 @@ namespace RafikiSecondarySchool
 
         private void btnmarkssheet_Click(object sender, EventArgs e)
         {
-            SheetDetailsForm sheet = new SheetDetailsForm();
+            MarksSheetForm sheet = new MarksSheetForm();
             sheet.Show();
+            this.Hide();
         }
 
         private void btnview_Click(object sender, EventArgs e)

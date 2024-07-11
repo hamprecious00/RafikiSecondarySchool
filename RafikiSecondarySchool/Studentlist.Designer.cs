@@ -33,18 +33,14 @@ namespace RafikiSecondarySchool
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentlistForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnback = new System.Windows.Forms.Button();
-            this.schoolDataSet = new RafikiSecondarySchool.SchoolDataSet();
-            this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentsTableAdapter = new RafikiSecondarySchool.SchoolDataSetTableAdapters.StudentsTableAdapter();
             this.admnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,11 +49,15 @@ namespace RafikiSecondarySchool
             this.dateofBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.currentYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.semesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.schoolDataSet = new RafikiSecondarySchool.SchoolDataSet();
+            this.btnback = new System.Windows.Forms.Button();
+            this.studentsTableAdapter = new RafikiSecondarySchool.SchoolDataSetTableAdapters.StudentsTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,50 +73,24 @@ namespace RafikiSecondarySchool
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(826, 157);
+            this.panel1.Size = new System.Drawing.Size(1081, 157);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
+            // panel2
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(48, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(126, 83);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Location = new System.Drawing.Point(0, 139);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1081, 10);
+            this.panel2.TabIndex = 1;
             // 
-            // label1
+            // panel3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(180, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(562, 43);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "RAFIKI SECONDARY SCHOOL";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(252, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(372, 43);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "P.O.BOX 581-30200";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Gabriola", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(339, 95);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(221, 54);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Motto: Hadi Kileleni";
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel3.Location = new System.Drawing.Point(0, 152);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1081, 10);
+            this.panel3.TabIndex = 2;
             // 
             // label4
             // 
@@ -129,21 +103,47 @@ namespace RafikiSecondarySchool
             this.label4.TabIndex = 4;
             this.label4.Text = "Available Students";
             // 
-            // panel2
+            // label3
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(28, 139);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(786, 10);
-            this.panel2.TabIndex = 1;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Gabriola", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(439, 95);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(221, 54);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Motto: Hadi Kileleni";
             // 
-            // panel3
+            // label2
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel3.Location = new System.Drawing.Point(28, 152);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(786, 10);
-            this.panel3.TabIndex = 2;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(352, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(372, 43);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "P.O.BOX 581-30200";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(280, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(562, 43);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "RAFIKI SECONDARY SCHOOL";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(152, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(165, 121);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // dataGridView1
             // 
@@ -152,7 +152,6 @@ namespace RafikiSecondarySchool
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -170,36 +169,11 @@ namespace RafikiSecondarySchool
             this.currentYearDataGridViewTextBoxColumn,
             this.semesterDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.studentsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 168);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 168);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(786, 389);
+            this.dataGridView1.Size = new System.Drawing.Size(1057, 480);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // btnback
-            // 
-            this.btnback.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnback.Location = new System.Drawing.Point(739, 563);
-            this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(75, 23);
-            this.btnback.TabIndex = 2;
-            this.btnback.Text = "Back";
-            this.btnback.UseVisualStyleBackColor = false;
-            this.btnback.Click += new System.EventHandler(this.btnback_Click);
-            // 
-            // schoolDataSet
-            // 
-            this.schoolDataSet.DataSetName = "SchoolDataSet";
-            this.schoolDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentsBindingSource
-            // 
-            this.studentsBindingSource.DataMember = "Students";
-            this.studentsBindingSource.DataSource = this.schoolDataSet;
-            // 
-            // studentsTableAdapter
-            // 
-            this.studentsTableAdapter.ClearBeforeFill = true;
             // 
             // admnoDataGridViewTextBoxColumn
             // 
@@ -273,12 +247,37 @@ namespace RafikiSecondarySchool
             this.semesterDataGridViewTextBoxColumn.Name = "semesterDataGridViewTextBoxColumn";
             this.semesterDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // studentsBindingSource
+            // 
+            this.studentsBindingSource.DataMember = "Students";
+            this.studentsBindingSource.DataSource = this.schoolDataSet;
+            // 
+            // schoolDataSet
+            // 
+            this.schoolDataSet.DataSetName = "SchoolDataSet";
+            this.schoolDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnback
+            // 
+            this.btnback.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnback.Location = new System.Drawing.Point(994, 654);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(75, 23);
+            this.btnback.TabIndex = 2;
+            this.btnback.Text = "Back";
+            this.btnback.UseVisualStyleBackColor = false;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
+            // 
+            // studentsTableAdapter
+            // 
+            this.studentsTableAdapter.ClearBeforeFill = true;
+            // 
             // StudentlistForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(826, 589);
+            this.ClientSize = new System.Drawing.Size(1081, 681);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
@@ -291,8 +290,8 @@ namespace RafikiSecondarySchool
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
