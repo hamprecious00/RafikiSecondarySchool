@@ -38,11 +38,8 @@ namespace RafikiSecondarySchool
             this.lblname = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.btnconfirm = new System.Windows.Forms.Button();
-            this.lblgrade = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.lblavg = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.lbltotal = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.txtindexno = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -81,6 +78,11 @@ namespace RafikiSecondarySchool
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.lblcompliment = new System.Windows.Forms.TextBox();
+            this.lblavg = new System.Windows.Forms.TextBox();
+            this.lbltotal = new System.Windows.Forms.TextBox();
+            this.lblgrade = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,6 +91,11 @@ namespace RafikiSecondarySchool
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.lblgrade);
+            this.panel1.Controls.Add(this.lbltotal);
+            this.panel1.Controls.Add(this.lblavg);
+            this.panel1.Controls.Add(this.lblcompliment);
+            this.panel1.Controls.Add(this.label25);
             this.panel1.Controls.Add(this.cboterm);
             this.panel1.Controls.Add(this.label24);
             this.panel1.Controls.Add(this.cboform);
@@ -96,11 +103,8 @@ namespace RafikiSecondarySchool
             this.panel1.Controls.Add(this.lblname);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.btnconfirm);
-            this.panel1.Controls.Add(this.lblgrade);
             this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.lblavg);
             this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.lbltotal);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.txtindexno);
             this.panel1.Controls.Add(this.label14);
@@ -211,55 +215,28 @@ namespace RafikiSecondarySchool
             this.btnconfirm.UseVisualStyleBackColor = true;
             this.btnconfirm.Click += new System.EventHandler(this.btnconfirm_Click);
             // 
-            // lblgrade
-            // 
-            this.lblgrade.AutoSize = true;
-            this.lblgrade.Location = new System.Drawing.Point(671, 220);
-            this.lblgrade.Name = "lblgrade";
-            this.lblgrade.Size = new System.Drawing.Size(23, 25);
-            this.lblgrade.TabIndex = 33;
-            this.lblgrade.Text = "0";
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(600, 220);
+            this.label20.Location = new System.Drawing.Point(552, 220);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(79, 25);
             this.label20.TabIndex = 32;
             this.label20.Text = "GRADE:";
             // 
-            // lblavg
-            // 
-            this.lblavg.AutoSize = true;
-            this.lblavg.Location = new System.Drawing.Point(671, 177);
-            this.lblavg.Name = "lblavg";
-            this.lblavg.Size = new System.Drawing.Size(23, 25);
-            this.lblavg.TabIndex = 31;
-            this.lblavg.Text = "0";
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(625, 177);
+            this.label18.Location = new System.Drawing.Point(570, 179);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(54, 25);
             this.label18.TabIndex = 30;
             this.label18.Text = "AVG:";
             // 
-            // lbltotal
-            // 
-            this.lbltotal.AutoSize = true;
-            this.lbltotal.Location = new System.Drawing.Point(671, 136);
-            this.lbltotal.Name = "lbltotal";
-            this.lbltotal.Size = new System.Drawing.Size(23, 25);
-            this.lbltotal.TabIndex = 29;
-            this.lbltotal.Text = "0";
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(609, 136);
+            this.label15.Location = new System.Drawing.Point(554, 138);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 25);
             this.label15.TabIndex = 28;
@@ -620,6 +597,51 @@ namespace RafikiSecondarySchool
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(552, 245);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(123, 25);
+            this.label25.TabIndex = 40;
+            this.label25.Text = "Compliment:";
+            // 
+            // lblcompliment
+            // 
+            this.lblcompliment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblcompliment.Location = new System.Drawing.Point(559, 273);
+            this.lblcompliment.Multiline = true;
+            this.lblcompliment.Name = "lblcompliment";
+            this.lblcompliment.Size = new System.Drawing.Size(188, 33);
+            this.lblcompliment.TabIndex = 42;
+            // 
+            // lblavg
+            // 
+            this.lblavg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblavg.Location = new System.Drawing.Point(628, 177);
+            this.lblavg.Multiline = true;
+            this.lblavg.Name = "lblavg";
+            this.lblavg.Size = new System.Drawing.Size(92, 33);
+            this.lblavg.TabIndex = 43;
+            // 
+            // lbltotal
+            // 
+            this.lbltotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbltotal.Location = new System.Drawing.Point(628, 136);
+            this.lbltotal.Multiline = true;
+            this.lbltotal.Name = "lbltotal";
+            this.lbltotal.Size = new System.Drawing.Size(92, 33);
+            this.lbltotal.TabIndex = 44;
+            // 
+            // lblgrade
+            // 
+            this.lblgrade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblgrade.Location = new System.Drawing.Point(628, 212);
+            this.lblgrade.Multiline = true;
+            this.lblgrade.Name = "lblgrade";
+            this.lblgrade.Size = new System.Drawing.Size(92, 33);
+            this.lblgrade.TabIndex = 45;
+            // 
             // EnterMarksForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -677,11 +699,8 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnentermarks;
         private System.Windows.Forms.Button btnclear;
-        private System.Windows.Forms.Label lblgrade;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label lblavg;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label lbltotal;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label lblname;
         private System.Windows.Forms.Label label16;
@@ -696,5 +715,10 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox cboform;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox lblgrade;
+        private System.Windows.Forms.TextBox lbltotal;
+        private System.Windows.Forms.TextBox lblavg;
+        private System.Windows.Forms.TextBox lblcompliment;
     }
 }

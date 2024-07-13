@@ -46,7 +46,7 @@ namespace RafikiSecondarySchool
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btnselectdata = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,7 +56,7 @@ namespace RafikiSecondarySchool
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.btnselectdata);
             this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.comboBox2);
@@ -188,6 +188,7 @@ namespace RafikiSecondarySchool
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 29);
             this.comboBox1.TabIndex = 14;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -236,15 +237,16 @@ namespace RafikiSecondarySchool
             this.label3.TabIndex = 17;
             this.label3.Text = "CLASS";
             // 
-            // label4
+            // btnselectdata
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label4.Location = new System.Drawing.Point(55, 138);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 21);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "SELECT...";
+            this.btnselectdata.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnselectdata.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnselectdata.Location = new System.Drawing.Point(46, 134);
+            this.btnselectdata.Name = "btnselectdata";
+            this.btnselectdata.Size = new System.Drawing.Size(118, 35);
+            this.btnselectdata.TabIndex = 19;
+            this.btnselectdata.Text = "SELECT DATA";
+            this.btnselectdata.UseVisualStyleBackColor = false;
             // 
             // MarksSheetForm
             // 
@@ -285,6 +287,6 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnselectdata;
     }
 }
