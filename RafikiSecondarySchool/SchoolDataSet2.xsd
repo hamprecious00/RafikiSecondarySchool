@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SchoolDataSet2" targetNamespace="http://tempuri.org/SchoolDataSet2.xsd" xmlns:mstns="http://tempuri.org/SchoolDataSet2.xsd" xmlns="http://tempuri.org/SchoolDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SchoolConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SchoolConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.RafikiSecondarySchool.Properties.Settings.GlobalReference.Default.SchoolConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View1TableAdapter" GeneratorDataComponentClassName="View1TableAdapter" Name="View1" UserDataComponentName="View1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SchoolConnectionString (Settings)" DbObjectName="School.dbo.View1" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Admno, StudentName, StudentForm, StudentClass, Semester, Indexno, Math, Eng, Kis, Bio, Chem, Phy, Geo, Cre, Hist, Agrics, Business, Ict, Total, Average, Grade, Compliment FROM dbo.View1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Admno" DataSetColumn="Admno" />
+              <Mapping SourceColumn="StudentName" DataSetColumn="StudentName" />
+              <Mapping SourceColumn="StudentForm" DataSetColumn="StudentForm" />
+              <Mapping SourceColumn="StudentClass" DataSetColumn="StudentClass" />
+              <Mapping SourceColumn="Semester" DataSetColumn="Semester" />
+              <Mapping SourceColumn="Indexno" DataSetColumn="Indexno" />
+              <Mapping SourceColumn="Math" DataSetColumn="Math" />
+              <Mapping SourceColumn="Eng" DataSetColumn="Eng" />
+              <Mapping SourceColumn="Kis" DataSetColumn="Kis" />
+              <Mapping SourceColumn="Bio" DataSetColumn="Bio" />
+              <Mapping SourceColumn="Chem" DataSetColumn="Chem" />
+              <Mapping SourceColumn="Phy" DataSetColumn="Phy" />
+              <Mapping SourceColumn="Geo" DataSetColumn="Geo" />
+              <Mapping SourceColumn="Cre" DataSetColumn="Cre" />
+              <Mapping SourceColumn="Hist" DataSetColumn="Hist" />
+              <Mapping SourceColumn="Agrics" DataSetColumn="Agrics" />
+              <Mapping SourceColumn="Business" DataSetColumn="Business" />
+              <Mapping SourceColumn="Ict" DataSetColumn="Ict" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+              <Mapping SourceColumn="Average" DataSetColumn="Average" />
+              <Mapping SourceColumn="Grade" DataSetColumn="Grade" />
+              <Mapping SourceColumn="Compliment" DataSetColumn="Compliment" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SchoolDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SchoolDataSet2" msprop:Generator_UserDSName="SchoolDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View1" msprop:Generator_TableClassName="View1DataTable" msprop:Generator_TableVarName="tableView1" msprop:Generator_TablePropName="View1" msprop:Generator_RowDeletingName="View1RowDeleting" msprop:Generator_RowChangingName="View1RowChanging" msprop:Generator_RowEvHandlerName="View1RowChangeEventHandler" msprop:Generator_RowDeletedName="View1RowDeleted" msprop:Generator_UserTableName="View1" msprop:Generator_RowChangedName="View1RowChanged" msprop:Generator_RowEvArgName="View1RowChangeEvent" msprop:Generator_RowClassName="View1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Admno" msprop:Generator_ColumnVarNameInTable="columnAdmno" msprop:Generator_ColumnPropNameInRow="Admno" msprop:Generator_ColumnPropNameInTable="AdmnoColumn" msprop:Generator_UserColumnName="Admno" type="xs:int" />
+              <xs:element name="StudentName" msprop:Generator_ColumnVarNameInTable="columnStudentName" msprop:Generator_ColumnPropNameInRow="StudentName" msprop:Generator_ColumnPropNameInTable="StudentNameColumn" msprop:Generator_UserColumnName="StudentName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StudentForm" msprop:Generator_ColumnVarNameInTable="columnStudentForm" msprop:Generator_ColumnPropNameInRow="StudentForm" msprop:Generator_ColumnPropNameInTable="StudentFormColumn" msprop:Generator_UserColumnName="StudentForm">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StudentClass" msprop:Generator_ColumnVarNameInTable="columnStudentClass" msprop:Generator_ColumnPropNameInRow="StudentClass" msprop:Generator_ColumnPropNameInTable="StudentClassColumn" msprop:Generator_UserColumnName="StudentClass">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Semester" msprop:Generator_ColumnVarNameInTable="columnSemester" msprop:Generator_ColumnPropNameInRow="Semester" msprop:Generator_ColumnPropNameInTable="SemesterColumn" msprop:Generator_UserColumnName="Semester">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Indexno" msprop:Generator_ColumnVarNameInTable="columnIndexno" msprop:Generator_ColumnPropNameInRow="Indexno" msprop:Generator_ColumnPropNameInTable="IndexnoColumn" msprop:Generator_UserColumnName="Indexno" type="xs:int" />
+              <xs:element name="Math" msprop:Generator_ColumnVarNameInTable="columnMath" msprop:Generator_ColumnPropNameInRow="Math" msprop:Generator_ColumnPropNameInTable="MathColumn" msprop:Generator_UserColumnName="Math" type="xs:int" minOccurs="0" />
+              <xs:element name="Eng" msprop:Generator_ColumnVarNameInTable="columnEng" msprop:Generator_ColumnPropNameInRow="Eng" msprop:Generator_ColumnPropNameInTable="EngColumn" msprop:Generator_UserColumnName="Eng" type="xs:int" minOccurs="0" />
+              <xs:element name="Kis" msprop:Generator_ColumnVarNameInTable="columnKis" msprop:Generator_ColumnPropNameInRow="Kis" msprop:Generator_ColumnPropNameInTable="KisColumn" msprop:Generator_UserColumnName="Kis" type="xs:int" minOccurs="0" />
+              <xs:element name="Bio" msprop:Generator_ColumnVarNameInTable="columnBio" msprop:Generator_ColumnPropNameInRow="Bio" msprop:Generator_ColumnPropNameInTable="BioColumn" msprop:Generator_UserColumnName="Bio" type="xs:int" minOccurs="0" />
+              <xs:element name="Chem" msprop:Generator_ColumnVarNameInTable="columnChem" msprop:Generator_ColumnPropNameInRow="Chem" msprop:Generator_ColumnPropNameInTable="ChemColumn" msprop:Generator_UserColumnName="Chem" type="xs:int" minOccurs="0" />
+              <xs:element name="Phy" msprop:Generator_ColumnVarNameInTable="columnPhy" msprop:Generator_ColumnPropNameInRow="Phy" msprop:Generator_ColumnPropNameInTable="PhyColumn" msprop:Generator_UserColumnName="Phy" type="xs:int" minOccurs="0" />
+              <xs:element name="Geo" msprop:Generator_ColumnVarNameInTable="columnGeo" msprop:Generator_ColumnPropNameInRow="Geo" msprop:Generator_ColumnPropNameInTable="GeoColumn" msprop:Generator_UserColumnName="Geo" type="xs:int" minOccurs="0" />
+              <xs:element name="Cre" msprop:Generator_ColumnVarNameInTable="columnCre" msprop:Generator_ColumnPropNameInRow="Cre" msprop:Generator_ColumnPropNameInTable="CreColumn" msprop:Generator_UserColumnName="Cre" type="xs:int" minOccurs="0" />
+              <xs:element name="Hist" msprop:Generator_ColumnVarNameInTable="columnHist" msprop:Generator_ColumnPropNameInRow="Hist" msprop:Generator_ColumnPropNameInTable="HistColumn" msprop:Generator_UserColumnName="Hist" type="xs:int" minOccurs="0" />
+              <xs:element name="Agrics" msprop:Generator_ColumnVarNameInTable="columnAgrics" msprop:Generator_ColumnPropNameInRow="Agrics" msprop:Generator_ColumnPropNameInTable="AgricsColumn" msprop:Generator_UserColumnName="Agrics" type="xs:int" minOccurs="0" />
+              <xs:element name="Business" msprop:Generator_ColumnVarNameInTable="columnBusiness" msprop:Generator_ColumnPropNameInRow="Business" msprop:Generator_ColumnPropNameInTable="BusinessColumn" msprop:Generator_UserColumnName="Business" type="xs:int" minOccurs="0" />
+              <xs:element name="Ict" msprop:Generator_ColumnVarNameInTable="columnIct" msprop:Generator_ColumnPropNameInRow="Ict" msprop:Generator_ColumnPropNameInTable="IctColumn" msprop:Generator_UserColumnName="Ict" type="xs:int" minOccurs="0" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Average" msprop:Generator_ColumnVarNameInTable="columnAverage" msprop:Generator_ColumnPropNameInRow="Average" msprop:Generator_ColumnPropNameInTable="AverageColumn" msprop:Generator_UserColumnName="Average" type="xs:int" />
+              <xs:element name="Grade" msprop:Generator_ColumnVarNameInTable="columnGrade" msprop:Generator_ColumnPropNameInRow="Grade" msprop:Generator_ColumnPropNameInTable="GradeColumn" msprop:Generator_UserColumnName="Grade">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Compliment" msprop:Generator_ColumnVarNameInTable="columnCompliment" msprop:Generator_ColumnPropNameInRow="Compliment" msprop:Generator_ColumnPropNameInTable="ComplimentColumn" msprop:Generator_UserColumnName="Compliment">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View1" />
+      <xs:field xpath="mstns:Admno" />
+      <xs:field xpath="mstns:Indexno" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

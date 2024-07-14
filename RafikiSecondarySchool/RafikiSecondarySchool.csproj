@@ -164,6 +164,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SchoolDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SchoolDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Studentlist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +230,28 @@
     </None>
     <None Include="SchoolDataSet.xss">
       <DependentUpon>SchoolDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDataSet1.xsc">
+      <DependentUpon>SchoolDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolDataSet1.xss">
+      <DependentUpon>SchoolDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDataSet2.xsc">
+      <DependentUpon>SchoolDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolDataSet2.xss">
+      <DependentUpon>SchoolDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
