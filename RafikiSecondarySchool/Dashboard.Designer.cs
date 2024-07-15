@@ -31,13 +31,13 @@ namespace RafikiSecondarySchool
         {
             this.btnLogout = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnview = new System.Windows.Forms.Button();
             this.btnreportcard = new System.Windows.Forms.Button();
             this.btnmarkssheet = new System.Windows.Forms.Button();
             this.btnmarksentry = new System.Windows.Forms.Button();
             this.btnaddstudent = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtuser = new System.Windows.Forms.TextBox();
-            this.btnview = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +70,16 @@ namespace RafikiSecondarySchool
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Options";
             // 
+            // btnview
+            // 
+            this.btnview.Location = new System.Drawing.Point(29, 330);
+            this.btnview.Name = "btnview";
+            this.btnview.Size = new System.Drawing.Size(223, 49);
+            this.btnview.TabIndex = 6;
+            this.btnview.Text = "View Students";
+            this.btnview.UseVisualStyleBackColor = true;
+            this.btnview.Click += new System.EventHandler(this.btnview_Click);
+            // 
             // btnreportcard
             // 
             this.btnreportcard.Location = new System.Drawing.Point(29, 260);
@@ -78,6 +88,7 @@ namespace RafikiSecondarySchool
             this.btnreportcard.TabIndex = 2;
             this.btnreportcard.Text = "Report Cards";
             this.btnreportcard.UseVisualStyleBackColor = true;
+            this.btnreportcard.Click += new System.EventHandler(this.btnreportcard_Click);
             // 
             // btnmarkssheet
             // 
@@ -130,16 +141,6 @@ namespace RafikiSecondarySchool
             this.txtuser.Size = new System.Drawing.Size(80, 29);
             this.txtuser.TabIndex = 4;
             this.txtuser.TextChanged += new System.EventHandler(this.txtuser_TextChanged);
-            // 
-            // btnview
-            // 
-            this.btnview.Location = new System.Drawing.Point(29, 330);
-            this.btnview.Name = "btnview";
-            this.btnview.Size = new System.Drawing.Size(223, 49);
-            this.btnview.TabIndex = 6;
-            this.btnview.Text = "View Students";
-            this.btnview.UseVisualStyleBackColor = true;
-            this.btnview.Click += new System.EventHandler(this.btnview_Click);
             // 
             // DashboardForm
             // 

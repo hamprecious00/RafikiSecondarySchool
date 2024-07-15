@@ -23,12 +23,12 @@ namespace RafikiSecondarySchool
 
         private void MarksSheetForm_load(object sender, EventArgs e)
         {
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("Select * From Views1", conn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
+            //conn.Open();
+            //SqlCommand cmd = new SqlCommand("Select * From Views1", conn);
+            //SqlDataAdapter da = new SqlDataAdapter(cmd);
+            //DataTable dt = new DataTable();
+            //da.Fill(dt);
+            //dataGridView1.DataSource = dt;
         }
 
         private void label22_Click(object sender, EventArgs e)
@@ -61,7 +61,18 @@ namespace RafikiSecondarySchool
         private void MarksSheetForm_Load_1(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'schoolDataSet2.View1' table. You can move, or remove it, as needed.
-            this.view1TableAdapter.Fill(this.schoolDataSet2.View1);
+            //this.view1TableAdapter.Fill(this.schoolDataSet2.View1);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(@"Select * From View1", conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
 
         }
     }

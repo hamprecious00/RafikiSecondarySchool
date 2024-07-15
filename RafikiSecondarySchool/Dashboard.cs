@@ -56,5 +56,12 @@ namespace RafikiSecondarySchool
             student.Show();
             this.Hide();
         }
+
+        private void btnreportcard_Click(object sender, EventArgs e)
+        {
+            ReportForm report = new ReportForm();
+            report.Show();
+            this.Hide();
+        }
     }
 }
