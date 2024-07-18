@@ -22,11 +22,6 @@ namespace RafikiSecondarySchool
             InitializeComponent();
         }
 
-        //private void closeToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    Application.Exit();
-        //}
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -54,7 +49,7 @@ namespace RafikiSecondarySchool
                     if (!string.IsNullOrEmpty(hashedPassword) && BCrypt.Net.BCrypt.Verify(password, hashedPassword))
                     {
                         // Login successful, open dashboard
-                        DashboardForm d = new DashboardForm();
+                        DashboardForm d = new DashboardForm(username);
                         d.Show();
                         this.Hide();
                     }
@@ -71,124 +66,11 @@ namespace RafikiSecondarySchool
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            //String username, password;
-            //username = txtusername.Text;
-            //password = txtpassword.Text;
-
-            //try 
-            //{
-            //    String querry = "SELECT * FROM Login WHERE username = '"+txtusername.Text+"' AND password = '"+txtpassword.Text+"'";
-            //    SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
-            //    DataTable dtable = new DataTable();
-            //    sda.Fill(dtable);
-
-            //    if(dtable.Rows.Count > 0)
-            //    {
-            //        username = txtusername.Text;
-            //        password = txtpassword.Text;
-
-            //        //open dashboard
-            //        DashboardForm d = new DashboardForm();
-            //        d.Show();
-            //        this.Hide();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Invalid Username or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //        txtusername.Clear();
-            //        txtpassword.Clear();
-
-            //        txtusername.Focus();
-            //    }
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Error");
-            //}
-            //finally
-            //{
-            //    conn.Close();
-            //}
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnexit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtusername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtpassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)

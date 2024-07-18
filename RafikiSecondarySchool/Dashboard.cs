@@ -12,9 +12,13 @@ namespace RafikiSecondarySchool
 {
     public partial class DashboardForm : Form
     {
-        public DashboardForm()
+        public DashboardForm(string username)
         {
             InitializeComponent();
+            lbluser.Text = username;
+        }
+        public DashboardForm() : this("Guest")
+        {
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -62,6 +66,16 @@ namespace RafikiSecondarySchool
             ReportForm report = new ReportForm();
             report.Show();
             this.Hide();
+        }
+
+        private void lbluser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DashboardForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

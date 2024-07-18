@@ -53,6 +53,11 @@ namespace RafikiSecondarySchool
                 reportViewer2.LocalReport.DataSources.Clear();
                 reportViewer2.LocalReport.DataSources.Add(rds);
                 reportViewer2.RefreshReport();
+
+                // Close the connection
+                conn.Close();
+
+                MessageBox.Show("Report Generated Successfully");
             }
             catch (Exception ex)
             {
@@ -71,6 +76,11 @@ namespace RafikiSecondarySchool
         {
 
             this.reportViewer2.RefreshReport();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

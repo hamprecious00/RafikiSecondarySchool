@@ -42,12 +42,12 @@ namespace RafikiSecondarySchool
                 if (IsValidEmail(email))
                 {
                     // Email format is valid
-                    textBox.BackColor = Color.White; // or any other indication of valid input
+                    textBox.BackColor = Color.White;
                 }
                 else
                 {
                     // Email format is invalid
-                    textBox.BackColor = Color.Pink; // or any other indication of invalid input
+                    textBox.BackColor = Color.Pink;
                 }
             }
         }

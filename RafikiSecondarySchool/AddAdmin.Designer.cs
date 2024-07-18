@@ -32,8 +32,11 @@ namespace RafikiSecondarySchool
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAdminForm));
             this.btnsignin = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtpass = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnexit = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,11 +48,8 @@ namespace RafikiSecondarySchool
             this.btnregister = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.txtusr = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtpass = new System.Windows.Forms.TextBox();
+            this.txtusr = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,15 +83,16 @@ namespace RafikiSecondarySchool
             this.panel4.Size = new System.Drawing.Size(480, 45);
             this.panel4.TabIndex = 9;
             // 
-            // panel3
+            // label8
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.txtpass);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(298, 191);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(480, 45);
-            this.panel3.TabIndex = 8;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label8.Location = new System.Drawing.Point(41, 10);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 21);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Email:";
             // 
             // txtemail
             // 
@@ -105,6 +106,39 @@ namespace RafikiSecondarySchool
             this.txtemail.TabIndex = 2;
             this.txtemail.UseSystemPasswordChar = true;
             this.txtemail.TextChanged += new System.EventHandler(this.txtemail_TextChanged);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.txtpass);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Location = new System.Drawing.Point(298, 191);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(480, 45);
+            this.panel3.TabIndex = 8;
+            // 
+            // txtpass
+            // 
+            this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtpass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtpass.Location = new System.Drawing.Point(104, 12);
+            this.txtpass.Multiline = true;
+            this.txtpass.Name = "txtpass";
+            this.txtpass.Size = new System.Drawing.Size(328, 30);
+            this.txtpass.TabIndex = 12;
+            this.txtpass.UseSystemPasswordChar = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label7.Location = new System.Drawing.Point(8, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(93, 21);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Password:";
             // 
             // label6
             // 
@@ -203,7 +237,7 @@ namespace RafikiSecondarySchool
             this.btnregister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.btnregister.FlatAppearance.BorderSize = 0;
             this.btnregister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnregister.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnregister.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregister.ForeColor = System.Drawing.Color.White;
             this.btnregister.Location = new System.Drawing.Point(320, 314);
             this.btnregister.Name = "btnregister";
@@ -239,17 +273,6 @@ namespace RafikiSecondarySchool
             this.panel5.Size = new System.Drawing.Size(480, 45);
             this.panel5.TabIndex = 9;
             // 
-            // txtusr
-            // 
-            this.txtusr.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtusr.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txtusr.Location = new System.Drawing.Point(102, 7);
-            this.txtusr.Multiline = true;
-            this.txtusr.Name = "txtusr";
-            this.txtusr.Size = new System.Drawing.Size(328, 30);
-            this.txtusr.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -261,39 +284,16 @@ namespace RafikiSecondarySchool
             this.label1.TabIndex = 11;
             this.label1.Text = "Username:";
             // 
-            // label7
+            // txtusr
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label7.Location = new System.Drawing.Point(8, 12);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 21);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Password:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label8.Location = new System.Drawing.Point(41, 10);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 21);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Email:";
-            // 
-            // txtpass
-            // 
-            this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtpass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txtpass.Location = new System.Drawing.Point(104, 12);
-            this.txtpass.Multiline = true;
-            this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(328, 30);
-            this.txtpass.TabIndex = 12;
-            this.txtpass.UseSystemPasswordChar = true;
+            this.txtusr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtusr.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtusr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtusr.Location = new System.Drawing.Point(102, 7);
+            this.txtusr.Multiline = true;
+            this.txtusr.Name = "txtusr";
+            this.txtusr.Size = new System.Drawing.Size(328, 30);
+            this.txtusr.TabIndex = 2;
             // 
             // AddAdminForm
             // 

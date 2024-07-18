@@ -31,6 +31,11 @@ namespace RafikiSecondarySchool
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnterMarksForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblgrade = new System.Windows.Forms.TextBox();
+            this.lbltotal = new System.Windows.Forms.TextBox();
+            this.lblavg = new System.Windows.Forms.TextBox();
+            this.lblcompliment = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.cboterm = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
             this.cboform = new System.Windows.Forms.ComboBox();
@@ -78,11 +83,6 @@ namespace RafikiSecondarySchool
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.lblcompliment = new System.Windows.Forms.TextBox();
-            this.lblavg = new System.Windows.Forms.TextBox();
-            this.lbltotal = new System.Windows.Forms.TextBox();
-            this.lblgrade = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -139,6 +139,51 @@ namespace RafikiSecondarySchool
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(788, 320);
             this.panel1.TabIndex = 1;
+            // 
+            // lblgrade
+            // 
+            this.lblgrade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblgrade.Location = new System.Drawing.Point(628, 212);
+            this.lblgrade.Multiline = true;
+            this.lblgrade.Name = "lblgrade";
+            this.lblgrade.Size = new System.Drawing.Size(92, 33);
+            this.lblgrade.TabIndex = 45;
+            // 
+            // lbltotal
+            // 
+            this.lbltotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbltotal.Location = new System.Drawing.Point(628, 136);
+            this.lbltotal.Multiline = true;
+            this.lbltotal.Name = "lbltotal";
+            this.lbltotal.Size = new System.Drawing.Size(92, 33);
+            this.lbltotal.TabIndex = 44;
+            // 
+            // lblavg
+            // 
+            this.lblavg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblavg.Location = new System.Drawing.Point(628, 177);
+            this.lblavg.Multiline = true;
+            this.lblavg.Name = "lblavg";
+            this.lblavg.Size = new System.Drawing.Size(92, 33);
+            this.lblavg.TabIndex = 43;
+            // 
+            // lblcompliment
+            // 
+            this.lblcompliment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblcompliment.Location = new System.Drawing.Point(559, 273);
+            this.lblcompliment.Multiline = true;
+            this.lblcompliment.Name = "lblcompliment";
+            this.lblcompliment.Size = new System.Drawing.Size(188, 33);
+            this.lblcompliment.TabIndex = 42;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(552, 245);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(123, 25);
+            this.label25.TabIndex = 40;
+            this.label25.Text = "Compliment:";
             // 
             // cboterm
             // 
@@ -207,12 +252,16 @@ namespace RafikiSecondarySchool
             // 
             // btnconfirm
             // 
+            this.btnconfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnconfirm.FlatAppearance.BorderSize = 0;
+            this.btnconfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnconfirm.ForeColor = System.Drawing.Color.White;
             this.btnconfirm.Location = new System.Drawing.Point(679, 20);
             this.btnconfirm.Name = "btnconfirm";
             this.btnconfirm.Size = new System.Drawing.Size(106, 34);
             this.btnconfirm.TabIndex = 29;
             this.btnconfirm.Text = "Confirm";
-            this.btnconfirm.UseVisualStyleBackColor = true;
+            this.btnconfirm.UseVisualStyleBackColor = false;
             this.btnconfirm.Click += new System.EventHandler(this.btnconfirm_Click);
             // 
             // label20
@@ -499,8 +548,11 @@ namespace RafikiSecondarySchool
             // 
             // btnback
             // 
-            this.btnback.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnback.FlatAppearance.BorderSize = 0;
+            this.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnback.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnback.ForeColor = System.Drawing.Color.White;
             this.btnback.Location = new System.Drawing.Point(698, 443);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(75, 34);
@@ -511,8 +563,11 @@ namespace RafikiSecondarySchool
             // 
             // btnentermarks
             // 
-            this.btnentermarks.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnentermarks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnentermarks.FlatAppearance.BorderSize = 0;
+            this.btnentermarks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnentermarks.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnentermarks.ForeColor = System.Drawing.Color.White;
             this.btnentermarks.Location = new System.Drawing.Point(12, 443);
             this.btnentermarks.Name = "btnentermarks";
             this.btnentermarks.Size = new System.Drawing.Size(106, 34);
@@ -523,9 +578,12 @@ namespace RafikiSecondarySchool
             // 
             // btnclear
             // 
-            this.btnclear.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnclear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnclear.FlatAppearance.BorderSize = 0;
+            this.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnclear.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclear.Location = new System.Drawing.Point(231, 440);
+            this.btnclear.ForeColor = System.Drawing.Color.White;
+            this.btnclear.Location = new System.Drawing.Point(189, 443);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(106, 34);
             this.btnclear.TabIndex = 28;
@@ -596,51 +654,6 @@ namespace RafikiSecondarySchool
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(552, 245);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(123, 25);
-            this.label25.TabIndex = 40;
-            this.label25.Text = "Compliment:";
-            // 
-            // lblcompliment
-            // 
-            this.lblcompliment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblcompliment.Location = new System.Drawing.Point(559, 273);
-            this.lblcompliment.Multiline = true;
-            this.lblcompliment.Name = "lblcompliment";
-            this.lblcompliment.Size = new System.Drawing.Size(188, 33);
-            this.lblcompliment.TabIndex = 42;
-            // 
-            // lblavg
-            // 
-            this.lblavg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblavg.Location = new System.Drawing.Point(628, 177);
-            this.lblavg.Multiline = true;
-            this.lblavg.Name = "lblavg";
-            this.lblavg.Size = new System.Drawing.Size(92, 33);
-            this.lblavg.TabIndex = 43;
-            // 
-            // lbltotal
-            // 
-            this.lbltotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbltotal.Location = new System.Drawing.Point(628, 136);
-            this.lbltotal.Multiline = true;
-            this.lbltotal.Name = "lbltotal";
-            this.lbltotal.Size = new System.Drawing.Size(92, 33);
-            this.lbltotal.TabIndex = 44;
-            // 
-            // lblgrade
-            // 
-            this.lblgrade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblgrade.Location = new System.Drawing.Point(628, 212);
-            this.lblgrade.Multiline = true;
-            this.lblgrade.Name = "lblgrade";
-            this.lblgrade.Size = new System.Drawing.Size(92, 33);
-            this.lblgrade.TabIndex = 45;
             // 
             // EnterMarksForm
             // 

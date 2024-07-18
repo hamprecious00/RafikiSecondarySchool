@@ -29,23 +29,30 @@ namespace RafikiSecondarySchool
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
             this.btnLogout = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnview = new System.Windows.Forms.Button();
             this.btnreportcard = new System.Windows.Forms.Button();
             this.btnmarkssheet = new System.Windows.Forms.Button();
             this.btnmarksentry = new System.Windows.Forms.Button();
             this.btnaddstudent = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbluser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtuser = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogout
             // 
-            this.btnLogout.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(938, 528);
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(906, 524);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(75, 30);
             this.btnLogout.TabIndex = 0;
@@ -53,94 +60,142 @@ namespace RafikiSecondarySchool
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox1.Controls.Add(this.btnview);
-            this.groupBox1.Controls.Add(this.btnreportcard);
-            this.groupBox1.Controls.Add(this.btnmarkssheet);
-            this.groupBox1.Controls.Add(this.btnmarksentry);
-            this.groupBox1.Controls.Add(this.btnaddstudent);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(30, 68);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(296, 409);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Options";
-            // 
             // btnview
             // 
-            this.btnview.Location = new System.Drawing.Point(29, 330);
+            this.btnview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnview.FlatAppearance.BorderSize = 0;
+            this.btnview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnview.ForeColor = System.Drawing.Color.White;
+            this.btnview.Location = new System.Drawing.Point(12, 181);
             this.btnview.Name = "btnview";
-            this.btnview.Size = new System.Drawing.Size(223, 49);
+            this.btnview.Size = new System.Drawing.Size(259, 49);
             this.btnview.TabIndex = 6;
             this.btnview.Text = "View Students";
-            this.btnview.UseVisualStyleBackColor = true;
+            this.btnview.UseVisualStyleBackColor = false;
             this.btnview.Click += new System.EventHandler(this.btnview_Click);
             // 
             // btnreportcard
             // 
-            this.btnreportcard.Location = new System.Drawing.Point(29, 260);
+            this.btnreportcard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnreportcard.FlatAppearance.BorderSize = 0;
+            this.btnreportcard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnreportcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreportcard.ForeColor = System.Drawing.Color.White;
+            this.btnreportcard.Location = new System.Drawing.Point(12, 383);
             this.btnreportcard.Name = "btnreportcard";
-            this.btnreportcard.Size = new System.Drawing.Size(223, 49);
+            this.btnreportcard.Size = new System.Drawing.Size(259, 49);
             this.btnreportcard.TabIndex = 2;
             this.btnreportcard.Text = "Report Cards";
-            this.btnreportcard.UseVisualStyleBackColor = true;
+            this.btnreportcard.UseVisualStyleBackColor = false;
             this.btnreportcard.Click += new System.EventHandler(this.btnreportcard_Click);
             // 
             // btnmarkssheet
             // 
             this.btnmarkssheet.AutoSize = true;
-            this.btnmarkssheet.Location = new System.Drawing.Point(29, 192);
+            this.btnmarkssheet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnmarkssheet.FlatAppearance.BorderSize = 0;
+            this.btnmarkssheet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmarkssheet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmarkssheet.ForeColor = System.Drawing.Color.White;
+            this.btnmarkssheet.Location = new System.Drawing.Point(12, 315);
             this.btnmarkssheet.Name = "btnmarkssheet";
-            this.btnmarkssheet.Size = new System.Drawing.Size(223, 49);
+            this.btnmarkssheet.Size = new System.Drawing.Size(259, 49);
             this.btnmarkssheet.TabIndex = 3;
             this.btnmarkssheet.Text = "Marks Sheet";
-            this.btnmarkssheet.UseVisualStyleBackColor = true;
+            this.btnmarkssheet.UseVisualStyleBackColor = false;
             this.btnmarkssheet.Click += new System.EventHandler(this.btnmarkssheet_Click);
             // 
             // btnmarksentry
             // 
-            this.btnmarksentry.Location = new System.Drawing.Point(29, 122);
+            this.btnmarksentry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnmarksentry.FlatAppearance.BorderSize = 0;
+            this.btnmarksentry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmarksentry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmarksentry.ForeColor = System.Drawing.Color.White;
+            this.btnmarksentry.Location = new System.Drawing.Point(12, 245);
             this.btnmarksentry.Name = "btnmarksentry";
-            this.btnmarksentry.Size = new System.Drawing.Size(223, 49);
+            this.btnmarksentry.Size = new System.Drawing.Size(259, 49);
             this.btnmarksentry.TabIndex = 4;
             this.btnmarksentry.Text = "Marks Entry";
-            this.btnmarksentry.UseVisualStyleBackColor = true;
+            this.btnmarksentry.UseVisualStyleBackColor = false;
             this.btnmarksentry.Click += new System.EventHandler(this.btnmarksentry_Click);
             // 
             // btnaddstudent
             // 
-            this.btnaddstudent.Location = new System.Drawing.Point(29, 58);
+            this.btnaddstudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnaddstudent.FlatAppearance.BorderSize = 0;
+            this.btnaddstudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaddstudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddstudent.ForeColor = System.Drawing.Color.White;
+            this.btnaddstudent.Location = new System.Drawing.Point(12, 449);
             this.btnaddstudent.Name = "btnaddstudent";
-            this.btnaddstudent.Size = new System.Drawing.Size(223, 49);
+            this.btnaddstudent.Size = new System.Drawing.Size(259, 49);
             this.btnaddstudent.TabIndex = 5;
             this.btnaddstudent.Text = "Register Students";
-            this.btnaddstudent.UseVisualStyleBackColor = true;
+            this.btnaddstudent.UseVisualStyleBackColor = false;
             this.btnaddstudent.Click += new System.EventHandler(this.btnaddstudent_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lbluser);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btnview);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btnaddstudent);
+            this.panel1.Controls.Add(this.btnmarksentry);
+            this.panel1.Controls.Add(this.btnmarkssheet);
+            this.panel1.Controls.Add(this.btnreportcard);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(285, 576);
+            this.panel1.TabIndex = 7;
+            // 
+            // lbluser
+            // 
+            this.lbluser.AutoSize = true;
+            this.lbluser.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbluser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.lbluser.Location = new System.Drawing.Point(104, 524);
+            this.lbluser.Name = "lbluser";
+            this.lbluser.Size = new System.Drawing.Size(27, 25);
+            this.lbluser.TabIndex = 10;
+            this.lbluser.Text = "...";
+            this.lbluser.Click += new System.EventHandler(this.lbluser_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(55, 501);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label1.Location = new System.Drawing.Point(12, 524);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 24);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "User";
+            this.label1.Size = new System.Drawing.Size(97, 25);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Welcome ";
             // 
-            // txtuser
+            // label2
             // 
-            this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtuser.Location = new System.Drawing.Point(202, 496);
-            this.txtuser.Multiline = true;
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(80, 29);
-            this.txtuser.TabIndex = 4;
-            this.txtuser.TextChanged += new System.EventHandler(this.txtuser_TextChanged);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label2.Location = new System.Drawing.Point(-1, 139);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(283, 19);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "\"Grades Made Easy, Success Made Possible\"";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(63, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(162, 162);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // DashboardForm
             // 
@@ -148,32 +203,33 @@ namespace RafikiSecondarySchool
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1072, 570);
-            this.Controls.Add(this.txtuser);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(993, 576);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLogout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DashboardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.DashboardForm_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnreportcard;
         private System.Windows.Forms.Button btnmarkssheet;
         private System.Windows.Forms.Button btnmarksentry;
         private System.Windows.Forms.Button btnaddstudent;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtuser;
         private System.Windows.Forms.Button btnview;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbluser;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
