@@ -110,6 +110,7 @@ namespace RafikiSecondarySchool
             this.Name = "LoadingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoadingForm";
+            this.Load += new System.EventHandler(this.LoadingForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.CenterPanel.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -130,6 +130,32 @@ namespace RafikiSecondarySchool
         {
             try
             {
+
+                // Open the connection
+                conn.Open();
+
+                // Create the SQL command
+                SqlCommand cmd = new SqlCommand("SELECT StudentName FROM View1 WHERE Admno = @Admno", conn);
+
+                // Add the Admno parameter to the command
+                cmd.Parameters.AddWithValue("@Admno", txtadm.Text);
+
+                // Execute the command and retrieve the name
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    lblname.Text = reader["StudentName"].ToString();
+                }
+                else
+                {
+                    lblname.Text = "Record not found";
+                }
+
+                // Close the reader and the connection
+                reader.Close();
+                conn.Close();
+
+
                 Double[] R = new Double[20];
                 R[0] = Convert.ToDouble(txtmath.Text);
                 R[1] = Convert.ToDouble(txtcre.Text);
@@ -187,6 +213,16 @@ namespace RafikiSecondarySchool
             {
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
+        }
+
+        private void txtmath_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblname_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
