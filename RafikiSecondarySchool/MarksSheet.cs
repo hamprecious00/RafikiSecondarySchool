@@ -55,19 +55,45 @@ namespace RafikiSecondarySchool
 
         private void btnselectdata_Click(object sender, EventArgs e)
         {
+            try
+            {
+                //StudentForm = '" + cboform.Text + "'
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(@"Select * From View1 where StudentForm = '" + cboform.Text + "'", conn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
 
+                conn.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
         }
 
         private void MarksSheetForm_Load_1(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'schoolDataSet2.View1' table. You can move, or remove it, as needed.
-            //this.view1TableAdapter.Fill(this.schoolDataSet2.View1);
-            conn.Open();
-            SqlCommand cmd = new SqlCommand(@"Select * From View1", conn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
+           try
+            {
+                // TODO: This line of code loads data into the 'schoolDataSet2.View1' table. You can move, or remove it, as needed.
+                //this.view1TableAdapter.Fill(this.schoolDataSet2.View1);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(@"Select * From View1", conn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+
+                conn.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
 
         }
 

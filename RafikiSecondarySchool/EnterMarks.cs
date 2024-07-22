@@ -68,8 +68,8 @@ namespace RafikiSecondarySchool
                 // Add parameters to the command
                 cmd.Parameters.AddWithValue("@Admno", txtadm.Text);
                 cmd.Parameters.AddWithValue("@Indexno", txtindexno.Text);
-                cmd.Parameters.AddWithValue("@Form", cboform.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("@Term", cboterm.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@Form", txtform.Text);
+                cmd.Parameters.AddWithValue("@Term", txtterm.Text);
                 cmd.Parameters.AddWithValue("@Math", txtmath.Text);
                 cmd.Parameters.AddWithValue("@Eng", txteng.Text);
                 cmd.Parameters.AddWithValue("@Kis", txtkis.Text);
@@ -108,8 +108,8 @@ namespace RafikiSecondarySchool
             txtindexno.Text = string.Empty;
             txtmath.Text = string.Empty;
             txtict.Text = string.Empty;
-            cboform.SelectedIndex = -1;
-            cboterm.SelectedIndex = -1;
+            txtform.Text = string.Empty;
+            txtterm.Text = string.Empty;
             txtbs.Text = string.Empty;
             txtagrics.Text = string.Empty;
             txthist.Text = string.Empty;
@@ -135,7 +135,7 @@ namespace RafikiSecondarySchool
                 conn.Open();
 
                 // Create the SQL command
-                SqlCommand cmd = new SqlCommand("SELECT StudentName FROM View1 WHERE Admno = @Admno", conn);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Students WHERE Admno = @Admno", conn);
 
                 // Add the Admno parameter to the command
                 cmd.Parameters.AddWithValue("@Admno", txtadm.Text);
@@ -145,10 +145,14 @@ namespace RafikiSecondarySchool
                 if (reader.Read())
                 {
                     lblname.Text = reader["StudentName"].ToString();
+                    txtform.Text = reader["StudentForm"].ToString();
+                    txtterm.Text = reader["Semester"].ToString();
                 }
                 else
                 {
                     lblname.Text = "Record not found";
+                    txtform.Text = "0";
+                    txtterm.Text = "0";
                 }
 
                 // Close the reader and the connection

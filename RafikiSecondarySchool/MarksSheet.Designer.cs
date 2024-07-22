@@ -31,16 +31,12 @@ namespace RafikiSecondarySchool
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarksSheetForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnselectdata = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboform = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -49,6 +45,8 @@ namespace RafikiSecondarySchool
             this.label22 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnexport = new System.Windows.Forms.Button();
+            this.btndownload = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.admnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,8 +74,6 @@ namespace RafikiSecondarySchool
             this.schoolDataSet2 = new RafikiSecondarySchool.SchoolDataSet2();
             this.button1 = new System.Windows.Forms.Button();
             this.view1TableAdapter = new RafikiSecondarySchool.SchoolDataSet2TableAdapters.View1TableAdapter();
-            this.btndownload = new System.Windows.Forms.Button();
-            this.btnexport = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -90,11 +86,7 @@ namespace RafikiSecondarySchool
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.btnselectdata);
-            this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cboform);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.dateTimePicker1);
@@ -110,83 +102,39 @@ namespace RafikiSecondarySchool
             // 
             // btnselectdata
             // 
-            this.btnselectdata.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnselectdata.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.btnselectdata.Location = new System.Drawing.Point(46, 134);
+            this.btnselectdata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnselectdata.FlatAppearance.BorderSize = 0;
+            this.btnselectdata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnselectdata.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnselectdata.ForeColor = System.Drawing.Color.White;
+            this.btnselectdata.Location = new System.Drawing.Point(214, 134);
             this.btnselectdata.Name = "btnselectdata";
-            this.btnselectdata.Size = new System.Drawing.Size(118, 35);
+            this.btnselectdata.Size = new System.Drawing.Size(118, 30);
             this.btnselectdata.TabIndex = 19;
             this.btnselectdata.Text = "SELECT DATA";
             this.btnselectdata.UseVisualStyleBackColor = false;
             this.btnselectdata.Click += new System.EventHandler(this.btnselectdata_Click);
             // 
-            // comboBox3
+            // cboform
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "E",
-            "W",
-            "N",
-            "S"});
-            this.comboBox3.Location = new System.Drawing.Point(590, 138);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 29);
-            this.comboBox3.TabIndex = 18;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(526, 144);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 23);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "CLASS";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Term 1",
-            "Term 2",
-            "Term 3"});
-            this.comboBox2.Location = new System.Drawing.Point(867, 139);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 29);
-            this.comboBox2.TabIndex = 16;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(806, 145);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 23);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "TERM";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboform.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.cboform.FormattingEnabled = true;
+            this.cboform.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-            this.comboBox1.Location = new System.Drawing.Point(328, 138);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 29);
-            this.comboBox1.TabIndex = 14;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cboform.Location = new System.Drawing.Point(87, 134);
+            this.cboform.Name = "cboform";
+            this.cboform.Size = new System.Drawing.Size(121, 29);
+            this.cboform.TabIndex = 14;
+            this.cboform.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(267, 142);
+            this.label1.Location = new System.Drawing.Point(26, 138);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 21);
             this.label1.TabIndex = 13;
@@ -255,6 +203,7 @@ namespace RafikiSecondarySchool
             // 
             // panel2
             // 
+            this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.Controls.Add(this.btnexport);
             this.panel2.Controls.Add(this.btndownload);
@@ -262,25 +211,55 @@ namespace RafikiSecondarySchool
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(0, 185);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1261, 458);
+            this.panel2.Size = new System.Drawing.Size(1264, 458);
             this.panel2.TabIndex = 1;
+            // 
+            // btnexport
+            // 
+            this.btnexport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnexport.FlatAppearance.BorderSize = 0;
+            this.btnexport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnexport.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnexport.ForeColor = System.Drawing.Color.White;
+            this.btnexport.Location = new System.Drawing.Point(140, 421);
+            this.btnexport.Name = "btnexport";
+            this.btnexport.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnexport.Size = new System.Drawing.Size(182, 34);
+            this.btnexport.TabIndex = 5;
+            this.btnexport.Text = "Export To Excel";
+            this.btnexport.UseVisualStyleBackColor = false;
+            // 
+            // btndownload
+            // 
+            this.btndownload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btndownload.FlatAppearance.BorderSize = 0;
+            this.btndownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndownload.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btndownload.ForeColor = System.Drawing.Color.White;
+            this.btndownload.Location = new System.Drawing.Point(3, 421);
+            this.btndownload.Name = "btndownload";
+            this.btndownload.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btndownload.Size = new System.Drawing.Size(96, 34);
+            this.btndownload.TabIndex = 4;
+            this.btndownload.Text = "Download";
+            this.btndownload.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold);
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold);
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.admnoDataGridViewTextBoxColumn,
@@ -306,14 +285,14 @@ namespace RafikiSecondarySchool
             this.gradeDataGridViewTextBoxColumn,
             this.complimentDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.view1BindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Location = new System.Drawing.Point(3, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
@@ -515,9 +494,11 @@ namespace RafikiSecondarySchool
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(1183, 421);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 34);
@@ -529,32 +510,6 @@ namespace RafikiSecondarySchool
             // view1TableAdapter
             // 
             this.view1TableAdapter.ClearBeforeFill = true;
-            // 
-            // btndownload
-            // 
-            this.btndownload.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btndownload.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btndownload.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.btndownload.Location = new System.Drawing.Point(3, 421);
-            this.btndownload.Name = "btndownload";
-            this.btndownload.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btndownload.Size = new System.Drawing.Size(96, 34);
-            this.btndownload.TabIndex = 4;
-            this.btndownload.Text = "Download";
-            this.btndownload.UseVisualStyleBackColor = false;
-            // 
-            // btnexport
-            // 
-            this.btnexport.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnexport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnexport.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnexport.Location = new System.Drawing.Point(140, 421);
-            this.btnexport.Name = "btnexport";
-            this.btnexport.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnexport.Size = new System.Drawing.Size(182, 34);
-            this.btnexport.TabIndex = 5;
-            this.btnexport.Text = "Export To Excel";
-            this.btnexport.UseVisualStyleBackColor = false;
             // 
             // MarksSheetForm
             // 
@@ -577,6 +532,7 @@ namespace RafikiSecondarySchool
             ((System.ComponentModel.ISupportInitialize)(this.view1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -591,11 +547,7 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboform;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnselectdata;

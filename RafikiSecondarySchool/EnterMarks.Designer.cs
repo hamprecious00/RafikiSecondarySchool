@@ -36,9 +36,7 @@ namespace RafikiSecondarySchool
             this.lblavg = new System.Windows.Forms.TextBox();
             this.lblcompliment = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.cboterm = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.cboform = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.lblname = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -83,6 +81,8 @@ namespace RafikiSecondarySchool
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtterm = new System.Windows.Forms.TextBox();
+            this.txtform = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,14 +91,14 @@ namespace RafikiSecondarySchool
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panel1.Controls.Add(this.txtform);
+            this.panel1.Controls.Add(this.txtterm);
             this.panel1.Controls.Add(this.lblgrade);
             this.panel1.Controls.Add(this.lbltotal);
             this.panel1.Controls.Add(this.lblavg);
             this.panel1.Controls.Add(this.lblcompliment);
             this.panel1.Controls.Add(this.label25);
-            this.panel1.Controls.Add(this.cboterm);
             this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.cboform);
             this.panel1.Controls.Add(this.label23);
             this.panel1.Controls.Add(this.lblname);
             this.panel1.Controls.Add(this.label16);
@@ -199,21 +199,6 @@ namespace RafikiSecondarySchool
             this.label25.TabIndex = 40;
             this.label25.Text = "Compliment:";
             // 
-            // cboterm
-            // 
-            this.cboterm.BackColor = System.Drawing.Color.White;
-            this.cboterm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboterm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.cboterm.FormattingEnabled = true;
-            this.cboterm.Items.AddRange(new object[] {
-            "Term 1",
-            "Term 2",
-            "Term 3"});
-            this.cboterm.Location = new System.Drawing.Point(736, 73);
-            this.cboterm.Name = "cboterm";
-            this.cboterm.Size = new System.Drawing.Size(109, 29);
-            this.cboterm.TabIndex = 39;
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -224,22 +209,6 @@ namespace RafikiSecondarySchool
             this.label24.Size = new System.Drawing.Size(52, 21);
             this.label24.TabIndex = 38;
             this.label24.Text = "Term:";
-            // 
-            // cboform
-            // 
-            this.cboform.BackColor = System.Drawing.Color.White;
-            this.cboform.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboform.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.cboform.FormattingEnabled = true;
-            this.cboform.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.cboform.Location = new System.Drawing.Point(545, 71);
-            this.cboform.Name = "cboform";
-            this.cboform.Size = new System.Drawing.Size(68, 29);
-            this.cboform.TabIndex = 37;
             // 
             // label23
             // 
@@ -709,7 +678,7 @@ namespace RafikiSecondarySchool
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(586, 87);
+            this.dateTimePicker1.Location = new System.Drawing.Point(787, 87);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 7;
@@ -719,7 +688,7 @@ namespace RafikiSecondarySchool
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.White;
             this.label19.Font = new System.Drawing.Font("Gabriola", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(323, 72);
+            this.label19.Location = new System.Drawing.Point(438, 74);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(152, 35);
             this.label19.TabIndex = 6;
@@ -729,7 +698,7 @@ namespace RafikiSecondarySchool
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label21.Location = new System.Drawing.Point(308, 47);
+            this.label21.Location = new System.Drawing.Point(423, 49);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(183, 25);
             this.label21.TabIndex = 5;
@@ -739,7 +708,7 @@ namespace RafikiSecondarySchool
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(227, 12);
+            this.label22.Location = new System.Drawing.Point(342, 14);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(344, 32);
             this.label22.TabIndex = 4;
@@ -748,12 +717,38 @@ namespace RafikiSecondarySchool
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(55, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(245, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(125, 95);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // txtterm
+            // 
+            this.txtterm.BackColor = System.Drawing.Color.White;
+            this.txtterm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtterm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtterm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtterm.Location = new System.Drawing.Point(691, 74);
+            this.txtterm.Multiline = true;
+            this.txtterm.Name = "txtterm";
+            this.txtterm.ReadOnly = true;
+            this.txtterm.Size = new System.Drawing.Size(110, 33);
+            this.txtterm.TabIndex = 46;
+            // 
+            // txtform
+            // 
+            this.txtform.BackColor = System.Drawing.Color.White;
+            this.txtform.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtform.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtform.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtform.Location = new System.Drawing.Point(535, 74);
+            this.txtform.Multiline = true;
+            this.txtform.Name = "txtform";
+            this.txtform.ReadOnly = true;
+            this.txtform.Size = new System.Drawing.Size(92, 33);
+            this.txtform.TabIndex = 47;
             // 
             // EnterMarksForm
             // 
@@ -824,14 +819,14 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.ComboBox cboterm;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.ComboBox cboform;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox lblgrade;
         private System.Windows.Forms.TextBox lbltotal;
         private System.Windows.Forms.TextBox lblavg;
         private System.Windows.Forms.TextBox lblcompliment;
+        private System.Windows.Forms.TextBox txtform;
+        private System.Windows.Forms.TextBox txtterm;
     }
 }
