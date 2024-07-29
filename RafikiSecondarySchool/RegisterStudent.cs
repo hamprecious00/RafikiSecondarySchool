@@ -52,10 +52,9 @@ namespace RafikiSecondarySchool
                 ,[StudentClass]
                 ,[DateofBirth]
                 
-                ,[CurrentYear]
-                ,[Semester])
+                ,[CurrentYear])
                 VALUES
-                (@Admno, @StudentName, @Gender, @StudentForm, @StudentClass, @DateofBirth, @CurrentYear, @Semester)", conn);
+                (@Admno, @StudentName, @Gender, @StudentForm, @StudentClass, @DateofBirth, @CurrentYear)", conn);
 
                 // Add parameters to the command
                 cmd.Parameters.AddWithValue("@Admno", txtadm.Text);
@@ -66,7 +65,7 @@ namespace RafikiSecondarySchool
                 cmd.Parameters.AddWithValue("@DateofBirth", DateTime.Parse(this.dateofbirth.Text));
                 //  cmd.Parameters.AddWithValue("@Photo", studentpic.Image);
                 cmd.Parameters.AddWithValue("@CurrentYear", txtcurrentyear.Text);
-                cmd.Parameters.AddWithValue("@Semester", cbosemester.SelectedItem.ToString());
+                //cmd.Parameters.AddWithValue("@Semester", cbosemester.SelectedItem.ToString());
 
                 // Execute the command
                 cmd.ExecuteNonQuery();
@@ -93,8 +92,8 @@ namespace RafikiSecondarySchool
             txtadm.Text = string.Empty;
             txtstudentname.Text = string.Empty;
             cbostudentclass.SelectedIndex = -1;
+            //cbostudentform.SelectedIndex = -1;
             cbostudentform.SelectedIndex = -1;
-            cbosemester.SelectedIndex = -1;
             txtcurrentyear.Text = String.Empty;
             cmbgender.SelectedIndex = -1;
 

@@ -29,7 +29,6 @@ namespace RafikiSecondarySchool
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentlistForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -41,6 +40,7 @@ namespace RafikiSecondarySchool
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnback = new System.Windows.Forms.Button();
             this.admnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,16 +48,9 @@ namespace RafikiSecondarySchool
             this.studentClassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateofBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.currentYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.semesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.schoolDataSet = new RafikiSecondarySchool.SchoolDataSet();
-            this.btnback = new System.Windows.Forms.Button();
-            this.studentsTableAdapter = new RafikiSecondarySchool.SchoolDataSetTableAdapters.StudentsTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,6 +68,7 @@ namespace RafikiSecondarySchool
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1081, 157);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -148,7 +142,6 @@ namespace RafikiSecondarySchool
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -167,14 +160,24 @@ namespace RafikiSecondarySchool
             this.studentFormDataGridViewTextBoxColumn,
             this.studentClassDataGridViewTextBoxColumn,
             this.dateofBirthDataGridViewTextBoxColumn,
-            this.currentYearDataGridViewTextBoxColumn,
-            this.semesterDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.studentsBindingSource;
+            this.currentYearDataGridViewTextBoxColumn});
             this.dataGridView1.Location = new System.Drawing.Point(12, 168);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(1057, 480);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // btnback
+            // 
+            this.btnback.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnback.Location = new System.Drawing.Point(994, 654);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(75, 23);
+            this.btnback.TabIndex = 2;
+            this.btnback.Text = "Back";
+            this.btnback.UseVisualStyleBackColor = false;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
             // admnoDataGridViewTextBoxColumn
             // 
@@ -239,40 +242,6 @@ namespace RafikiSecondarySchool
             this.currentYearDataGridViewTextBoxColumn.Name = "currentYearDataGridViewTextBoxColumn";
             this.currentYearDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // semesterDataGridViewTextBoxColumn
-            // 
-            this.semesterDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.semesterDataGridViewTextBoxColumn.DataPropertyName = "Semester";
-            this.semesterDataGridViewTextBoxColumn.FillWeight = 67.58804F;
-            this.semesterDataGridViewTextBoxColumn.HeaderText = "Term";
-            this.semesterDataGridViewTextBoxColumn.Name = "semesterDataGridViewTextBoxColumn";
-            this.semesterDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // studentsBindingSource
-            // 
-            this.studentsBindingSource.DataMember = "Students";
-            this.studentsBindingSource.DataSource = this.schoolDataSet;
-            // 
-            // schoolDataSet
-            // 
-            this.schoolDataSet.DataSetName = "SchoolDataSet";
-            this.schoolDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // btnback
-            // 
-            this.btnback.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnback.Location = new System.Drawing.Point(994, 654);
-            this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(75, 23);
-            this.btnback.TabIndex = 2;
-            this.btnback.Text = "Back";
-            this.btnback.UseVisualStyleBackColor = false;
-            this.btnback.Click += new System.EventHandler(this.btnback_Click);
-            // 
-            // studentsTableAdapter
-            // 
-            this.studentsTableAdapter.ClearBeforeFill = true;
-            // 
             // StudentlistForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,8 +260,6 @@ namespace RafikiSecondarySchool
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -309,9 +276,6 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnback;
-        private SchoolDataSet schoolDataSet;
-        private System.Windows.Forms.BindingSource studentsBindingSource;
-        private SchoolDataSetTableAdapters.StudentsTableAdapter studentsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn admnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
@@ -319,6 +283,5 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.DataGridViewTextBoxColumn studentClassDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateofBirthDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn currentYearDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn semesterDataGridViewTextBoxColumn;
     }
 }

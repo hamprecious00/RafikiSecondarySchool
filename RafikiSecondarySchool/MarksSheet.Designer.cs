@@ -32,8 +32,6 @@ namespace RafikiSecondarySchool
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarksSheetForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnselectdata = new System.Windows.Forms.Button();
             this.cboform = new System.Windows.Forms.ComboBox();
@@ -45,15 +43,13 @@ namespace RafikiSecondarySchool
             this.label22 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnexport = new System.Windows.Forms.Button();
-            this.btndownload = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtMarksSheet = new System.Windows.Forms.DataGridView();
             this.admnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentFormDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentClassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.semesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.indexnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.termDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.engDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,15 +67,17 @@ namespace RafikiSecondarySchool
             this.gradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.complimentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.view1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.schoolDataSet2 = new RafikiSecondarySchool.SchoolDataSet2();
+            this.schoolDataSet3 = new RafikiSecondarySchool.SchoolDataSet3();
+            this.btnexport = new System.Windows.Forms.Button();
+            this.btndownload = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.view1TableAdapter = new RafikiSecondarySchool.SchoolDataSet2TableAdapters.View1TableAdapter();
+            this.view1TableAdapter = new RafikiSecondarySchool.SchoolDataSet3TableAdapters.View1TableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtMarksSheet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.view1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -205,14 +203,246 @@ namespace RafikiSecondarySchool
             // 
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.dtMarksSheet);
             this.panel2.Controls.Add(this.btnexport);
             this.panel2.Controls.Add(this.btndownload);
-            this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(0, 185);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1264, 458);
             this.panel2.TabIndex = 1;
+            // 
+            // dtMarksSheet
+            // 
+            this.dtMarksSheet.AutoGenerateColumns = false;
+            this.dtMarksSheet.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtMarksSheet.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dtMarksSheet.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dtMarksSheet.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtMarksSheet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtMarksSheet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtMarksSheet.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.admnoDataGridViewTextBoxColumn,
+            this.studentNameDataGridViewTextBoxColumn,
+            this.studentFormDataGridViewTextBoxColumn,
+            this.studentClassDataGridViewTextBoxColumn,
+            this.indexnoDataGridViewTextBoxColumn,
+            this.termDataGridViewTextBoxColumn,
+            this.mathDataGridViewTextBoxColumn,
+            this.engDataGridViewTextBoxColumn,
+            this.kisDataGridViewTextBoxColumn,
+            this.bioDataGridViewTextBoxColumn,
+            this.chemDataGridViewTextBoxColumn,
+            this.phyDataGridViewTextBoxColumn,
+            this.geoDataGridViewTextBoxColumn,
+            this.creDataGridViewTextBoxColumn,
+            this.histDataGridViewTextBoxColumn,
+            this.agricsDataGridViewTextBoxColumn,
+            this.businessDataGridViewTextBoxColumn,
+            this.ictDataGridViewTextBoxColumn,
+            this.totalDataGridViewTextBoxColumn,
+            this.averageDataGridViewTextBoxColumn,
+            this.gradeDataGridViewTextBoxColumn,
+            this.complimentDataGridViewTextBoxColumn});
+            this.dtMarksSheet.DataSource = this.view1BindingSource;
+            this.dtMarksSheet.Location = new System.Drawing.Point(3, 3);
+            this.dtMarksSheet.Name = "dtMarksSheet";
+            this.dtMarksSheet.RowHeadersVisible = false;
+            this.dtMarksSheet.Size = new System.Drawing.Size(1255, 412);
+            this.dtMarksSheet.TabIndex = 6;
+            // 
+            // admnoDataGridViewTextBoxColumn
+            // 
+            this.admnoDataGridViewTextBoxColumn.DataPropertyName = "Admno";
+            this.admnoDataGridViewTextBoxColumn.HeaderText = "Adm";
+            this.admnoDataGridViewTextBoxColumn.Name = "admnoDataGridViewTextBoxColumn";
+            this.admnoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.admnoDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // studentNameDataGridViewTextBoxColumn
+            // 
+            this.studentNameDataGridViewTextBoxColumn.DataPropertyName = "StudentName";
+            this.studentNameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.studentNameDataGridViewTextBoxColumn.Name = "studentNameDataGridViewTextBoxColumn";
+            this.studentNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.studentNameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // studentFormDataGridViewTextBoxColumn
+            // 
+            this.studentFormDataGridViewTextBoxColumn.DataPropertyName = "StudentForm";
+            this.studentFormDataGridViewTextBoxColumn.HeaderText = "Form";
+            this.studentFormDataGridViewTextBoxColumn.Name = "studentFormDataGridViewTextBoxColumn";
+            this.studentFormDataGridViewTextBoxColumn.ReadOnly = true;
+            this.studentFormDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // studentClassDataGridViewTextBoxColumn
+            // 
+            this.studentClassDataGridViewTextBoxColumn.DataPropertyName = "StudentClass";
+            this.studentClassDataGridViewTextBoxColumn.HeaderText = "Class";
+            this.studentClassDataGridViewTextBoxColumn.Name = "studentClassDataGridViewTextBoxColumn";
+            this.studentClassDataGridViewTextBoxColumn.ReadOnly = true;
+            this.studentClassDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // indexnoDataGridViewTextBoxColumn
+            // 
+            this.indexnoDataGridViewTextBoxColumn.DataPropertyName = "Indexno";
+            this.indexnoDataGridViewTextBoxColumn.HeaderText = "Index";
+            this.indexnoDataGridViewTextBoxColumn.Name = "indexnoDataGridViewTextBoxColumn";
+            this.indexnoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.indexnoDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // termDataGridViewTextBoxColumn
+            // 
+            this.termDataGridViewTextBoxColumn.DataPropertyName = "Term";
+            this.termDataGridViewTextBoxColumn.HeaderText = "Term";
+            this.termDataGridViewTextBoxColumn.Name = "termDataGridViewTextBoxColumn";
+            this.termDataGridViewTextBoxColumn.ReadOnly = true;
+            this.termDataGridViewTextBoxColumn.Width = 45;
+            // 
+            // mathDataGridViewTextBoxColumn
+            // 
+            this.mathDataGridViewTextBoxColumn.DataPropertyName = "Math";
+            this.mathDataGridViewTextBoxColumn.HeaderText = "Math";
+            this.mathDataGridViewTextBoxColumn.Name = "mathDataGridViewTextBoxColumn";
+            this.mathDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mathDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // engDataGridViewTextBoxColumn
+            // 
+            this.engDataGridViewTextBoxColumn.DataPropertyName = "Eng";
+            this.engDataGridViewTextBoxColumn.HeaderText = "Eng";
+            this.engDataGridViewTextBoxColumn.Name = "engDataGridViewTextBoxColumn";
+            this.engDataGridViewTextBoxColumn.ReadOnly = true;
+            this.engDataGridViewTextBoxColumn.Width = 45;
+            // 
+            // kisDataGridViewTextBoxColumn
+            // 
+            this.kisDataGridViewTextBoxColumn.DataPropertyName = "Kis";
+            this.kisDataGridViewTextBoxColumn.HeaderText = "Kis";
+            this.kisDataGridViewTextBoxColumn.Name = "kisDataGridViewTextBoxColumn";
+            this.kisDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kisDataGridViewTextBoxColumn.Width = 45;
+            // 
+            // bioDataGridViewTextBoxColumn
+            // 
+            this.bioDataGridViewTextBoxColumn.DataPropertyName = "Bio";
+            this.bioDataGridViewTextBoxColumn.HeaderText = "Bio";
+            this.bioDataGridViewTextBoxColumn.Name = "bioDataGridViewTextBoxColumn";
+            this.bioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bioDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // chemDataGridViewTextBoxColumn
+            // 
+            this.chemDataGridViewTextBoxColumn.DataPropertyName = "Chem";
+            this.chemDataGridViewTextBoxColumn.HeaderText = "Chem";
+            this.chemDataGridViewTextBoxColumn.Name = "chemDataGridViewTextBoxColumn";
+            this.chemDataGridViewTextBoxColumn.ReadOnly = true;
+            this.chemDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // phyDataGridViewTextBoxColumn
+            // 
+            this.phyDataGridViewTextBoxColumn.DataPropertyName = "Phy";
+            this.phyDataGridViewTextBoxColumn.HeaderText = "Phy";
+            this.phyDataGridViewTextBoxColumn.Name = "phyDataGridViewTextBoxColumn";
+            this.phyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.phyDataGridViewTextBoxColumn.Width = 45;
+            // 
+            // geoDataGridViewTextBoxColumn
+            // 
+            this.geoDataGridViewTextBoxColumn.DataPropertyName = "Geo";
+            this.geoDataGridViewTextBoxColumn.HeaderText = "Geo";
+            this.geoDataGridViewTextBoxColumn.Name = "geoDataGridViewTextBoxColumn";
+            this.geoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.geoDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // creDataGridViewTextBoxColumn
+            // 
+            this.creDataGridViewTextBoxColumn.DataPropertyName = "Cre";
+            this.creDataGridViewTextBoxColumn.HeaderText = "Cre";
+            this.creDataGridViewTextBoxColumn.Name = "creDataGridViewTextBoxColumn";
+            this.creDataGridViewTextBoxColumn.ReadOnly = true;
+            this.creDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // histDataGridViewTextBoxColumn
+            // 
+            this.histDataGridViewTextBoxColumn.DataPropertyName = "Hist";
+            this.histDataGridViewTextBoxColumn.HeaderText = "Hist";
+            this.histDataGridViewTextBoxColumn.Name = "histDataGridViewTextBoxColumn";
+            this.histDataGridViewTextBoxColumn.ReadOnly = true;
+            this.histDataGridViewTextBoxColumn.Width = 45;
+            // 
+            // agricsDataGridViewTextBoxColumn
+            // 
+            this.agricsDataGridViewTextBoxColumn.DataPropertyName = "Agrics";
+            this.agricsDataGridViewTextBoxColumn.HeaderText = "Agrics";
+            this.agricsDataGridViewTextBoxColumn.Name = "agricsDataGridViewTextBoxColumn";
+            this.agricsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.agricsDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // businessDataGridViewTextBoxColumn
+            // 
+            this.businessDataGridViewTextBoxColumn.DataPropertyName = "Business";
+            this.businessDataGridViewTextBoxColumn.HeaderText = "B/S";
+            this.businessDataGridViewTextBoxColumn.Name = "businessDataGridViewTextBoxColumn";
+            this.businessDataGridViewTextBoxColumn.ReadOnly = true;
+            this.businessDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // ictDataGridViewTextBoxColumn
+            // 
+            this.ictDataGridViewTextBoxColumn.DataPropertyName = "Ict";
+            this.ictDataGridViewTextBoxColumn.HeaderText = "Ict";
+            this.ictDataGridViewTextBoxColumn.Name = "ictDataGridViewTextBoxColumn";
+            this.ictDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ictDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.totalDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // averageDataGridViewTextBoxColumn
+            // 
+            this.averageDataGridViewTextBoxColumn.DataPropertyName = "Average";
+            this.averageDataGridViewTextBoxColumn.HeaderText = "Avg";
+            this.averageDataGridViewTextBoxColumn.Name = "averageDataGridViewTextBoxColumn";
+            this.averageDataGridViewTextBoxColumn.ReadOnly = true;
+            this.averageDataGridViewTextBoxColumn.Width = 45;
+            // 
+            // gradeDataGridViewTextBoxColumn
+            // 
+            this.gradeDataGridViewTextBoxColumn.DataPropertyName = "Grade";
+            this.gradeDataGridViewTextBoxColumn.HeaderText = "Grade";
+            this.gradeDataGridViewTextBoxColumn.Name = "gradeDataGridViewTextBoxColumn";
+            this.gradeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gradeDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // complimentDataGridViewTextBoxColumn
+            // 
+            this.complimentDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.complimentDataGridViewTextBoxColumn.DataPropertyName = "Compliment";
+            this.complimentDataGridViewTextBoxColumn.HeaderText = "Compliment";
+            this.complimentDataGridViewTextBoxColumn.Name = "complimentDataGridViewTextBoxColumn";
+            this.complimentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // view1BindingSource
+            // 
+            this.view1BindingSource.DataMember = "View1";
+            this.view1BindingSource.DataSource = this.schoolDataSet3;
+            // 
+            // schoolDataSet3
+            // 
+            this.schoolDataSet3.DataSetName = "SchoolDataSet3";
+            this.schoolDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnexport
             // 
@@ -243,254 +473,6 @@ namespace RafikiSecondarySchool
             this.btndownload.TabIndex = 4;
             this.btndownload.Text = "Download";
             this.btndownload.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold);
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.admnoDataGridViewTextBoxColumn,
-            this.studentNameDataGridViewTextBoxColumn,
-            this.studentFormDataGridViewTextBoxColumn,
-            this.studentClassDataGridViewTextBoxColumn,
-            this.semesterDataGridViewTextBoxColumn,
-            this.indexnoDataGridViewTextBoxColumn,
-            this.mathDataGridViewTextBoxColumn,
-            this.engDataGridViewTextBoxColumn,
-            this.kisDataGridViewTextBoxColumn,
-            this.bioDataGridViewTextBoxColumn,
-            this.chemDataGridViewTextBoxColumn,
-            this.phyDataGridViewTextBoxColumn,
-            this.geoDataGridViewTextBoxColumn,
-            this.creDataGridViewTextBoxColumn,
-            this.histDataGridViewTextBoxColumn,
-            this.agricsDataGridViewTextBoxColumn,
-            this.businessDataGridViewTextBoxColumn,
-            this.ictDataGridViewTextBoxColumn,
-            this.totalDataGridViewTextBoxColumn,
-            this.averageDataGridViewTextBoxColumn,
-            this.gradeDataGridViewTextBoxColumn,
-            this.complimentDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.view1BindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1258, 418);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // admnoDataGridViewTextBoxColumn
-            // 
-            this.admnoDataGridViewTextBoxColumn.DataPropertyName = "Admno";
-            this.admnoDataGridViewTextBoxColumn.Frozen = true;
-            this.admnoDataGridViewTextBoxColumn.HeaderText = "Adm";
-            this.admnoDataGridViewTextBoxColumn.Name = "admnoDataGridViewTextBoxColumn";
-            this.admnoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.admnoDataGridViewTextBoxColumn.Width = 45;
-            // 
-            // studentNameDataGridViewTextBoxColumn
-            // 
-            this.studentNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.studentNameDataGridViewTextBoxColumn.DataPropertyName = "StudentName";
-            this.studentNameDataGridViewTextBoxColumn.Frozen = true;
-            this.studentNameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.studentNameDataGridViewTextBoxColumn.Name = "studentNameDataGridViewTextBoxColumn";
-            this.studentNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.studentNameDataGridViewTextBoxColumn.Width = 171;
-            // 
-            // studentFormDataGridViewTextBoxColumn
-            // 
-            this.studentFormDataGridViewTextBoxColumn.DataPropertyName = "StudentForm";
-            this.studentFormDataGridViewTextBoxColumn.Frozen = true;
-            this.studentFormDataGridViewTextBoxColumn.HeaderText = "Form";
-            this.studentFormDataGridViewTextBoxColumn.Name = "studentFormDataGridViewTextBoxColumn";
-            this.studentFormDataGridViewTextBoxColumn.ReadOnly = true;
-            this.studentFormDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // studentClassDataGridViewTextBoxColumn
-            // 
-            this.studentClassDataGridViewTextBoxColumn.DataPropertyName = "StudentClass";
-            this.studentClassDataGridViewTextBoxColumn.Frozen = true;
-            this.studentClassDataGridViewTextBoxColumn.HeaderText = "Class";
-            this.studentClassDataGridViewTextBoxColumn.Name = "studentClassDataGridViewTextBoxColumn";
-            this.studentClassDataGridViewTextBoxColumn.ReadOnly = true;
-            this.studentClassDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // semesterDataGridViewTextBoxColumn
-            // 
-            this.semesterDataGridViewTextBoxColumn.DataPropertyName = "Semester";
-            this.semesterDataGridViewTextBoxColumn.Frozen = true;
-            this.semesterDataGridViewTextBoxColumn.HeaderText = "Term";
-            this.semesterDataGridViewTextBoxColumn.Name = "semesterDataGridViewTextBoxColumn";
-            this.semesterDataGridViewTextBoxColumn.ReadOnly = true;
-            this.semesterDataGridViewTextBoxColumn.Width = 45;
-            // 
-            // indexnoDataGridViewTextBoxColumn
-            // 
-            this.indexnoDataGridViewTextBoxColumn.DataPropertyName = "Indexno";
-            this.indexnoDataGridViewTextBoxColumn.Frozen = true;
-            this.indexnoDataGridViewTextBoxColumn.HeaderText = "Index";
-            this.indexnoDataGridViewTextBoxColumn.Name = "indexnoDataGridViewTextBoxColumn";
-            this.indexnoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.indexnoDataGridViewTextBoxColumn.Width = 55;
-            // 
-            // mathDataGridViewTextBoxColumn
-            // 
-            this.mathDataGridViewTextBoxColumn.DataPropertyName = "Math";
-            this.mathDataGridViewTextBoxColumn.HeaderText = "Math";
-            this.mathDataGridViewTextBoxColumn.Name = "mathDataGridViewTextBoxColumn";
-            this.mathDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mathDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // engDataGridViewTextBoxColumn
-            // 
-            this.engDataGridViewTextBoxColumn.DataPropertyName = "Eng";
-            this.engDataGridViewTextBoxColumn.HeaderText = "Eng";
-            this.engDataGridViewTextBoxColumn.Name = "engDataGridViewTextBoxColumn";
-            this.engDataGridViewTextBoxColumn.ReadOnly = true;
-            this.engDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // kisDataGridViewTextBoxColumn
-            // 
-            this.kisDataGridViewTextBoxColumn.DataPropertyName = "Kis";
-            this.kisDataGridViewTextBoxColumn.HeaderText = "Kis";
-            this.kisDataGridViewTextBoxColumn.Name = "kisDataGridViewTextBoxColumn";
-            this.kisDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kisDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // bioDataGridViewTextBoxColumn
-            // 
-            this.bioDataGridViewTextBoxColumn.DataPropertyName = "Bio";
-            this.bioDataGridViewTextBoxColumn.HeaderText = "Bio";
-            this.bioDataGridViewTextBoxColumn.Name = "bioDataGridViewTextBoxColumn";
-            this.bioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bioDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // chemDataGridViewTextBoxColumn
-            // 
-            this.chemDataGridViewTextBoxColumn.DataPropertyName = "Chem";
-            this.chemDataGridViewTextBoxColumn.HeaderText = "Chem";
-            this.chemDataGridViewTextBoxColumn.Name = "chemDataGridViewTextBoxColumn";
-            this.chemDataGridViewTextBoxColumn.ReadOnly = true;
-            this.chemDataGridViewTextBoxColumn.Width = 55;
-            // 
-            // phyDataGridViewTextBoxColumn
-            // 
-            this.phyDataGridViewTextBoxColumn.DataPropertyName = "Phy";
-            this.phyDataGridViewTextBoxColumn.HeaderText = "Phy";
-            this.phyDataGridViewTextBoxColumn.Name = "phyDataGridViewTextBoxColumn";
-            this.phyDataGridViewTextBoxColumn.ReadOnly = true;
-            this.phyDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // geoDataGridViewTextBoxColumn
-            // 
-            this.geoDataGridViewTextBoxColumn.DataPropertyName = "Geo";
-            this.geoDataGridViewTextBoxColumn.HeaderText = "Geo";
-            this.geoDataGridViewTextBoxColumn.Name = "geoDataGridViewTextBoxColumn";
-            this.geoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.geoDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // creDataGridViewTextBoxColumn
-            // 
-            this.creDataGridViewTextBoxColumn.DataPropertyName = "Cre";
-            this.creDataGridViewTextBoxColumn.HeaderText = "Cre";
-            this.creDataGridViewTextBoxColumn.Name = "creDataGridViewTextBoxColumn";
-            this.creDataGridViewTextBoxColumn.ReadOnly = true;
-            this.creDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // histDataGridViewTextBoxColumn
-            // 
-            this.histDataGridViewTextBoxColumn.DataPropertyName = "Hist";
-            this.histDataGridViewTextBoxColumn.HeaderText = "Hist";
-            this.histDataGridViewTextBoxColumn.Name = "histDataGridViewTextBoxColumn";
-            this.histDataGridViewTextBoxColumn.ReadOnly = true;
-            this.histDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // agricsDataGridViewTextBoxColumn
-            // 
-            this.agricsDataGridViewTextBoxColumn.DataPropertyName = "Agrics";
-            this.agricsDataGridViewTextBoxColumn.HeaderText = "Agric";
-            this.agricsDataGridViewTextBoxColumn.Name = "agricsDataGridViewTextBoxColumn";
-            this.agricsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.agricsDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // businessDataGridViewTextBoxColumn
-            // 
-            this.businessDataGridViewTextBoxColumn.DataPropertyName = "Business";
-            this.businessDataGridViewTextBoxColumn.HeaderText = "B/S";
-            this.businessDataGridViewTextBoxColumn.Name = "businessDataGridViewTextBoxColumn";
-            this.businessDataGridViewTextBoxColumn.ReadOnly = true;
-            this.businessDataGridViewTextBoxColumn.Width = 45;
-            // 
-            // ictDataGridViewTextBoxColumn
-            // 
-            this.ictDataGridViewTextBoxColumn.DataPropertyName = "Ict";
-            this.ictDataGridViewTextBoxColumn.HeaderText = "Ict";
-            this.ictDataGridViewTextBoxColumn.Name = "ictDataGridViewTextBoxColumn";
-            this.ictDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ictDataGridViewTextBoxColumn.Width = 35;
-            // 
-            // totalDataGridViewTextBoxColumn
-            // 
-            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
-            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
-            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
-            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.totalDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // averageDataGridViewTextBoxColumn
-            // 
-            this.averageDataGridViewTextBoxColumn.DataPropertyName = "Average";
-            this.averageDataGridViewTextBoxColumn.HeaderText = "Avg";
-            this.averageDataGridViewTextBoxColumn.Name = "averageDataGridViewTextBoxColumn";
-            this.averageDataGridViewTextBoxColumn.ReadOnly = true;
-            this.averageDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // gradeDataGridViewTextBoxColumn
-            // 
-            this.gradeDataGridViewTextBoxColumn.DataPropertyName = "Grade";
-            this.gradeDataGridViewTextBoxColumn.HeaderText = "Grade";
-            this.gradeDataGridViewTextBoxColumn.Name = "gradeDataGridViewTextBoxColumn";
-            this.gradeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.gradeDataGridViewTextBoxColumn.Width = 55;
-            // 
-            // complimentDataGridViewTextBoxColumn
-            // 
-            this.complimentDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.complimentDataGridViewTextBoxColumn.DataPropertyName = "Compliment";
-            this.complimentDataGridViewTextBoxColumn.HeaderText = "Compliment";
-            this.complimentDataGridViewTextBoxColumn.Name = "complimentDataGridViewTextBoxColumn";
-            this.complimentDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // view1BindingSource
-            // 
-            this.view1BindingSource.DataMember = "View1";
-            this.view1BindingSource.DataSource = this.schoolDataSet2;
-            // 
-            // schoolDataSet2
-            // 
-            this.schoolDataSet2.DataSetName = "SchoolDataSet2";
-            this.schoolDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
@@ -528,9 +510,9 @@ namespace RafikiSecondarySchool
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtMarksSheet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.view1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schoolDataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -549,17 +531,19 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox cboform;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnselectdata;
-        private SchoolDataSet2 schoolDataSet2;
+        private System.Windows.Forms.Button btnexport;
+        private System.Windows.Forms.Button btndownload;
+        private SchoolDataSet3 schoolDataSet3;
         private System.Windows.Forms.BindingSource view1BindingSource;
-        private SchoolDataSet2TableAdapters.View1TableAdapter view1TableAdapter;
+        private SchoolDataSet3TableAdapters.View1TableAdapter view1TableAdapter;
+        private System.Windows.Forms.DataGridView dtMarksSheet;
         private System.Windows.Forms.DataGridViewTextBoxColumn admnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentFormDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentClassDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn semesterDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn indexnoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn termDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mathDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn engDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kisDataGridViewTextBoxColumn;
@@ -576,7 +560,5 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.DataGridViewTextBoxColumn averageDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gradeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn complimentDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnexport;
-        private System.Windows.Forms.Button btndownload;
     }
 }

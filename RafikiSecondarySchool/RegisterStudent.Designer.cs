@@ -32,11 +32,9 @@ namespace RafikiSecondarySchool
             this.label1 = new System.Windows.Forms.Label();
             this.txtadm = new System.Windows.Forms.TextBox();
             this.btnregister = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtstudentname = new System.Windows.Forms.TextBox();
             this.btnback = new System.Windows.Forms.Button();
@@ -44,9 +42,7 @@ namespace RafikiSecondarySchool
             this.btnnew = new System.Windows.Forms.Button();
             this.dateofbirth = new System.Windows.Forms.DateTimePicker();
             this.txtcurrentyear = new System.Windows.Forms.TextBox();
-            this.cbosemester = new System.Windows.Forms.ComboBox();
             this.cbostudentclass = new System.Windows.Forms.ComboBox();
-            this.cbostudentform = new System.Windows.Forms.ComboBox();
             this.cmbgender = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -54,17 +50,17 @@ namespace RafikiSecondarySchool
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.cbostudentform = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -110,18 +106,6 @@ namespace RafikiSecondarySchool
             this.btnregister.UseVisualStyleBackColor = false;
             this.btnregister.Click += new System.EventHandler(this.btnregister_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label2.Location = new System.Drawing.Point(62, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 21);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Semester";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -159,18 +143,6 @@ namespace RafikiSecondarySchool
             this.label5.Text = "Student Class";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label6.Location = new System.Drawing.Point(32, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 21);
-            this.label6.TabIndex = 8;
-            this.label6.Text = " Student Form";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -197,12 +169,12 @@ namespace RafikiSecondarySchool
             // btnback
             // 
             this.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnback.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnback.Location = new System.Drawing.Point(753, 0);
+            this.btnback.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnback.Location = new System.Drawing.Point(738, 12);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(67, 55);
             this.btnback.TabIndex = 15;
-            this.btnback.Text = "X";
+            this.btnback.Text = "🔙";
             this.btnback.UseVisualStyleBackColor = true;
             this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
@@ -260,19 +232,6 @@ namespace RafikiSecondarySchool
             this.txtcurrentyear.TabIndex = 19;
             this.txtcurrentyear.TextChanged += new System.EventHandler(this.txtcurrentyear_TextChanged);
             // 
-            // cbosemester
-            // 
-            this.cbosemester.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.cbosemester.FormattingEnabled = true;
-            this.cbosemester.Items.AddRange(new object[] {
-            "Term 1",
-            "Term 2",
-            "Term 3"});
-            this.cbosemester.Location = new System.Drawing.Point(149, 7);
-            this.cbosemester.Name = "cbosemester";
-            this.cbosemester.Size = new System.Drawing.Size(336, 29);
-            this.cbosemester.TabIndex = 24;
-            // 
             // cbostudentclass
             // 
             this.cbostudentclass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
@@ -286,20 +245,6 @@ namespace RafikiSecondarySchool
             this.cbostudentclass.Name = "cbostudentclass";
             this.cbostudentclass.Size = new System.Drawing.Size(336, 29);
             this.cbostudentclass.TabIndex = 23;
-            // 
-            // cbostudentform
-            // 
-            this.cbostudentform.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.cbostudentform.FormattingEnabled = true;
-            this.cbostudentform.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.cbostudentform.Location = new System.Drawing.Point(149, 8);
-            this.cbostudentform.Name = "cbostudentform";
-            this.cbostudentform.Size = new System.Drawing.Size(336, 29);
-            this.cbostudentform.TabIndex = 22;
             // 
             // cmbgender
             // 
@@ -379,24 +324,13 @@ namespace RafikiSecondarySchool
             this.panel5.Size = new System.Drawing.Size(466, 49);
             this.panel5.TabIndex = 27;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel6.Controls.Add(this.cbostudentform);
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel6.Location = new System.Drawing.Point(279, 229);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(507, 49);
-            this.panel6.TabIndex = 29;
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel7.Controls.Add(this.cbostudentclass);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel7.Location = new System.Drawing.Point(279, 283);
+            this.panel7.Location = new System.Drawing.Point(279, 294);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(507, 49);
             this.panel7.TabIndex = 30;
@@ -407,7 +341,7 @@ namespace RafikiSecondarySchool
             this.panel8.Controls.Add(this.dateofbirth);
             this.panel8.Controls.Add(this.label4);
             this.panel8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel8.Location = new System.Drawing.Point(279, 338);
+            this.panel8.Location = new System.Drawing.Point(279, 349);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(507, 49);
             this.panel8.TabIndex = 31;
@@ -418,21 +352,10 @@ namespace RafikiSecondarySchool
             this.panel9.Controls.Add(this.label3);
             this.panel9.Controls.Add(this.txtcurrentyear);
             this.panel9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel9.Location = new System.Drawing.Point(279, 389);
+            this.panel9.Location = new System.Drawing.Point(279, 400);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(507, 49);
             this.panel9.TabIndex = 32;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel10.Controls.Add(this.cbosemester);
-            this.panel10.Controls.Add(this.label2);
-            this.panel10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel10.Location = new System.Drawing.Point(279, 444);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(507, 49);
-            this.panel10.TabIndex = 33;
             // 
             // label8
             // 
@@ -446,18 +369,54 @@ namespace RafikiSecondarySchool
             this.label8.TabIndex = 2;
             this.label8.Text = "Register New Student";
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel10.Controls.Add(this.cbostudentform);
+            this.panel10.Controls.Add(this.label2);
+            this.panel10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel10.Location = new System.Drawing.Point(279, 239);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(507, 49);
+            this.panel10.TabIndex = 34;
+            // 
+            // cbostudentform
+            // 
+            this.cbostudentform.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.cbostudentform.FormattingEnabled = true;
+            this.cbostudentform.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cbostudentform.Location = new System.Drawing.Point(149, 7);
+            this.cbostudentform.Name = "cbostudentform";
+            this.cbostudentform.Size = new System.Drawing.Size(336, 29);
+            this.cbostudentform.TabIndex = 24;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label2.Location = new System.Drawing.Point(95, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 21);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Form";
+            // 
             // RegisterStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(817, 531);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.panel10);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -476,8 +435,6 @@ namespace RafikiSecondarySchool
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -496,11 +453,9 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtadm;
         private System.Windows.Forms.Button btnregister;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtstudentname;
         private System.Windows.Forms.Button btnback;
@@ -510,19 +465,18 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.TextBox txtcurrentyear;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbgender;
-        private System.Windows.Forms.ComboBox cbosemester;
         private System.Windows.Forms.ComboBox cbostudentclass;
-        private System.Windows.Forms.ComboBox cbostudentform;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.ComboBox cbostudentform;
+        private System.Windows.Forms.Label label2;
     }
 }

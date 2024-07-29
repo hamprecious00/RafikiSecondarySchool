@@ -32,7 +32,7 @@ namespace RafikiSecondarySchool
         {
             RegisterStudentForm r = new RegisterStudentForm();
             r.Show();
-            this.Hide();
+            //this.Hide();
         }
 
         private void txtuser_TextChanged(object sender, EventArgs e)
@@ -76,6 +76,26 @@ namespace RafikiSecondarySchool
         private void DashboardForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
         }
     }
 }

@@ -69,7 +69,7 @@ namespace RafikiSecondarySchool
                 cmd.Parameters.AddWithValue("@Admno", txtadm.Text);
                 cmd.Parameters.AddWithValue("@Indexno", txtindexno.Text);
                 cmd.Parameters.AddWithValue("@Form", txtform.Text);
-                cmd.Parameters.AddWithValue("@Term", txtterm.Text);
+                cmd.Parameters.AddWithValue("@Term", cboterm.SelectedItem.ToString());
                 cmd.Parameters.AddWithValue("@Math", txtmath.Text);
                 cmd.Parameters.AddWithValue("@Eng", txteng.Text);
                 cmd.Parameters.AddWithValue("@Kis", txtkis.Text);
@@ -109,7 +109,7 @@ namespace RafikiSecondarySchool
             txtmath.Text = string.Empty;
             txtict.Text = string.Empty;
             txtform.Text = string.Empty;
-            txtterm.Text = string.Empty;
+            //txtterm.Text = string.Empty;
             txtbs.Text = string.Empty;
             txtagrics.Text = string.Empty;
             txthist.Text = string.Empty;
@@ -120,6 +120,7 @@ namespace RafikiSecondarySchool
             txtbio.Text = string.Empty;
             txtkis.Text = string.Empty;
             txteng.Text = string.Empty;
+            cboterm.SelectedIndex = -1;
             lblavg.Text = "0";
             lbltotal.Text = "0";
             lblgrade.Text = "...";
@@ -146,13 +147,13 @@ namespace RafikiSecondarySchool
                 {
                     lblname.Text = reader["StudentName"].ToString();
                     txtform.Text = reader["StudentForm"].ToString();
-                    txtterm.Text = reader["Semester"].ToString();
+                    //txtterm.Text = reader["Semester"].ToString();
                 }
                 else
                 {
                     lblname.Text = "Record not found";
                     txtform.Text = "0";
-                    txtterm.Text = "0";
+                    //txtterm.Text = "0";
                 }
 
                 // Close the reader and the connection
@@ -225,6 +226,16 @@ namespace RafikiSecondarySchool
         }
 
         private void lblname_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbs_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbio_TextChanged(object sender, EventArgs e)
         {
 
         }
