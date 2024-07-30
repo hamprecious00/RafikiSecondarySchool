@@ -57,6 +57,9 @@ namespace RafikiSecondarySchool
             this.panel10 = new System.Windows.Forms.Panel();
             this.cbostudentform = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtpassword = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -65,6 +68,7 @@ namespace RafikiSecondarySchool
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -406,12 +410,47 @@ namespace RafikiSecondarySchool
             this.label2.TabIndex = 4;
             this.label2.Text = "Form";
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Controls.Add(this.txtpassword);
+            this.panel6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel6.Location = new System.Drawing.Point(279, 455);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(507, 49);
+            this.panel6.TabIndex = 33;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label6.Location = new System.Drawing.Point(61, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 21);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Password";
+            // 
+            // txtpassword
+            // 
+            this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtpassword.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtpassword.Location = new System.Drawing.Point(149, 8);
+            this.txtpassword.Multiline = true;
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.Size = new System.Drawing.Size(336, 32);
+            this.txtpassword.TabIndex = 19;
+            // 
             // RegisterStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(817, 531);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel9);
@@ -443,6 +482,8 @@ namespace RafikiSecondarySchool
             this.panel9.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -478,5 +519,8 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.ComboBox cbostudentform;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtpassword;
     }
 }

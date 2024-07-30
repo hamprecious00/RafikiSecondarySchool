@@ -41,8 +41,11 @@ namespace RafikiSecondarySchool
                 // Open the connection
                 conn.Open();
 
-                SqlCommand cmd = new SqlCommand("Select * From View1 where Admno = '"+txtadm.Text+"'", conn);
-                //cmd.Parameters.AddWithValue("@Admno", txtadm.Text);
+                // Use parameterized query to prevent SQL injection
+                SqlCommand cmd = new SqlCommand(
+                    "SELECT * FROM View1 WHERE Admno = @Admno AND Term = @Term", conn);
+                cmd.Parameters.AddWithValue("@Admno", txtadm.Text);
+                cmd.Parameters.AddWithValue("@Term", cboterm.Text);
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -54,14 +57,19 @@ namespace RafikiSecondarySchool
                 reportViewer2.LocalReport.DataSources.Add(rds);
                 reportViewer2.RefreshReport();
 
-                // Close the connection
-                conn.Close();
-
                 MessageBox.Show("Report Generated Successfully");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                // Ensure the connection is closed in the finally block
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
             }
         }
 

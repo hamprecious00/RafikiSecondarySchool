@@ -39,6 +39,7 @@ namespace RafikiSecondarySchool
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnstudentlogin = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtpassword = new System.Windows.Forms.TextBox();
@@ -67,7 +68,7 @@ namespace RafikiSecondarySchool
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(148, 35);
             this.btnLogin.TabIndex = 0;
-            this.btnLogin.Text = "LOGIN";
+            this.btnLogin.Text = "LOGIN ADMIN";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -81,7 +82,6 @@ namespace RafikiSecondarySchool
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(370, 32);
             this.txtusername.TabIndex = 2;
-            //this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             // 
             // label2
             // 
@@ -92,7 +92,6 @@ namespace RafikiSecondarySchool
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 6;
-            //this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel1
             // 
@@ -106,7 +105,6 @@ namespace RafikiSecondarySchool
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 530);
             this.panel1.TabIndex = 9;
-            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label6
             // 
@@ -118,7 +116,6 @@ namespace RafikiSecondarySchool
             this.label6.Size = new System.Drawing.Size(136, 24);
             this.label6.TabIndex = 4;
             this.label6.Text = "Welcome to";
-            //this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -130,7 +127,6 @@ namespace RafikiSecondarySchool
             this.label5.Size = new System.Drawing.Size(275, 24);
             this.label5.TabIndex = 3;
             this.label5.Text = "\"Your success is our future\"";
-            //this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -142,7 +138,6 @@ namespace RafikiSecondarySchool
             this.label4.Size = new System.Drawing.Size(221, 24);
             this.label4.TabIndex = 2;
             this.label4.Text = "Student  Gradebook";
-            //this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox1
             // 
@@ -153,10 +148,10 @@ namespace RafikiSecondarySchool
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            //this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnstudentlogin);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
@@ -169,7 +164,21 @@ namespace RafikiSecondarySchool
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(480, 530);
             this.panel2.TabIndex = 10;
-            //this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnstudentlogin
+            // 
+            this.btnstudentlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnstudentlogin.FlatAppearance.BorderSize = 0;
+            this.btnstudentlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnstudentlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnstudentlogin.ForeColor = System.Drawing.Color.White;
+            this.btnstudentlogin.Location = new System.Drawing.Point(295, 308);
+            this.btnstudentlogin.Name = "btnstudentlogin";
+            this.btnstudentlogin.Size = new System.Drawing.Size(148, 35);
+            this.btnstudentlogin.TabIndex = 11;
+            this.btnstudentlogin.Text = "LOGIN STUDENT";
+            this.btnstudentlogin.UseVisualStyleBackColor = false;
+            this.btnstudentlogin.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -178,11 +187,10 @@ namespace RafikiSecondarySchool
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button1.Location = new System.Drawing.Point(277, 308);
+            this.button1.Location = new System.Drawing.Point(320, 492);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 35);
             this.button1.TabIndex = 10;
-            this.button1.Text = "Add admin?";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -195,7 +203,6 @@ namespace RafikiSecondarySchool
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(480, 45);
             this.panel4.TabIndex = 9;
-            //this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // txtpassword
             // 
@@ -218,7 +225,6 @@ namespace RafikiSecondarySchool
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
-           // this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picte);
             // 
             // panel3
@@ -230,7 +236,6 @@ namespace RafikiSecondarySchool
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(480, 45);
             this.panel3.TabIndex = 8;
-            //this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // pictureBox2
             // 
@@ -241,7 +246,6 @@ namespace RafikiSecondarySchool
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
-            //this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // btnexit
             // 
@@ -265,10 +269,9 @@ namespace RafikiSecondarySchool
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.label3.Location = new System.Drawing.Point(10, 139);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 25);
+            this.label3.Size = new System.Drawing.Size(174, 25);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Admin Login";
-            //this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.Text = "Welcome, Login";
             // 
             // LoginForm
             // 
@@ -282,7 +285,6 @@ namespace RafikiSecondarySchool
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-           // this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -317,6 +319,7 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txtpassword;
+        private System.Windows.Forms.Button btnstudentlogin;
     }
 }
 

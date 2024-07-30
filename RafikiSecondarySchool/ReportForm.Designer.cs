@@ -37,6 +37,8 @@ namespace RafikiSecondarySchool
             this.btngenerate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cboterm = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +57,8 @@ namespace RafikiSecondarySchool
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panel1.Controls.Add(this.cboterm);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnexit);
             this.panel1.Controls.Add(this.txtadm);
             this.panel1.Controls.Add(this.btngenerate);
@@ -100,7 +104,7 @@ namespace RafikiSecondarySchool
             this.btngenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btngenerate.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btngenerate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btngenerate.Location = new System.Drawing.Point(272, 62);
+            this.btngenerate.Location = new System.Drawing.Point(420, 64);
             this.btngenerate.Name = "btngenerate";
             this.btngenerate.Size = new System.Drawing.Size(97, 29);
             this.btngenerate.TabIndex = 14;
@@ -128,6 +132,31 @@ namespace RafikiSecondarySchool
             this.reportViewer2.ServerReport.BearerToken = null;
             this.reportViewer2.Size = new System.Drawing.Size(721, 577);
             this.reportViewer2.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(240, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 19);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "TERM:";
+            // 
+            // cboterm
+            // 
+            this.cboterm.Font = new System.Drawing.Font("Century Gothic", 13.25F);
+            this.cboterm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(125)))));
+            this.cboterm.FormattingEnabled = true;
+            this.cboterm.Items.AddRange(new object[] {
+            "Term1",
+            "Term2",
+            "Term3"});
+            this.cboterm.Location = new System.Drawing.Point(288, 62);
+            this.cboterm.Name = "cboterm";
+            this.cboterm.Size = new System.Drawing.Size(116, 29);
+            this.cboterm.TabIndex = 18;
             // 
             // ReportForm
             // 
@@ -158,5 +187,7 @@ namespace RafikiSecondarySchool
         //private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Button btnexit;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
+        private System.Windows.Forms.ComboBox cboterm;
+        private System.Windows.Forms.Label label2;
     }
 }

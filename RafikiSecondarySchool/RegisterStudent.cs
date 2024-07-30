@@ -40,8 +40,12 @@ namespace RafikiSecondarySchool
             try
             {
 
+                string password = txtpassword.Text;
+
                 // Open the connection
                 conn.Open();
+
+                string hashedPassword = BCrypt.Net.BCrypt.HashPassword(txtpassword.Text);
 
                 // Create the SQL command with parameters
                 SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Students]
@@ -52,9 +56,10 @@ namespace RafikiSecondarySchool
                 ,[StudentClass]
                 ,[DateofBirth]
                 
-                ,[CurrentYear])
+                ,[CurrentYear]
+                ,[Password])
                 VALUES
-                (@Admno, @StudentName, @Gender, @StudentForm, @StudentClass, @DateofBirth, @CurrentYear)", conn);
+                (@Admno, @StudentName, @Gender, @StudentForm, @StudentClass, @DateofBirth, @CurrentYear, @Password)", conn);
 
                 // Add parameters to the command
                 cmd.Parameters.AddWithValue("@Admno", txtadm.Text);
@@ -65,6 +70,7 @@ namespace RafikiSecondarySchool
                 cmd.Parameters.AddWithValue("@DateofBirth", DateTime.Parse(this.dateofbirth.Text));
                 //  cmd.Parameters.AddWithValue("@Photo", studentpic.Image);
                 cmd.Parameters.AddWithValue("@CurrentYear", txtcurrentyear.Text);
+                cmd.Parameters.AddWithValue("@Password", hashedPassword);
                 //cmd.Parameters.AddWithValue("@Semester", cbosemester.SelectedItem.ToString());
 
                 // Execute the command

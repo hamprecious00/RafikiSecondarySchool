@@ -6,47 +6,41 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace RafikiSecondarySchool
 {
-    public partial class StudentlistForm : Form
+    public partial class ComplainForm : Form
     {
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-4ROF1AO\SQLEXPRESS;Initial Catalog=School;Integrated Security=True");
 
-        public StudentlistForm()
+        public ComplainForm()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnback_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             DashboardForm d = new DashboardForm();
             d.Show();
             this.Hide();
         }
 
-        private void StudentlistForm_Load(object sender, EventArgs e)
+        private void ComplainForm_Load(object sender, EventArgs e)
         {
-            
             try
             {
-                
+
                 conn.Open();
-                SqlCommand cmd = new SqlCommand(@"Select * From View2", conn);
+                SqlCommand cmd = new SqlCommand(@"Select * From View3", conn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
 
                 CustomizeDataGridView();
-
 
                 conn.Close();
             }
@@ -55,7 +49,6 @@ namespace RafikiSecondarySchool
             {
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
-
         }
 
         private void CustomizeDataGridView()
@@ -66,7 +59,7 @@ namespace RafikiSecondarySchool
             {
                 BackColor = Color.Navy,
                 ForeColor = Color.White,
-                Font = new Font("Verdana", 12, FontStyle.Bold)
+                Font = new Font("Verdana", 16, FontStyle.Bold)
             };
             dataGridView1.ColumnHeadersDefaultCellStyle = headerStyle;
 
@@ -85,21 +78,6 @@ namespace RafikiSecondarySchool
 
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.MultiSelect = false;
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

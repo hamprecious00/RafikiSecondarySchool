@@ -23,7 +23,9 @@ namespace RafikiSecondarySchool
 
         private void btnexit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DashboardForm d = new DashboardForm();
+            d.Show();
+            this.Hide();
         }
 
         private void btnsignin_Click(object sender, EventArgs e)

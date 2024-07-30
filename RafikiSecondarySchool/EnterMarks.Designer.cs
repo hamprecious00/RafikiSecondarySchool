@@ -31,6 +31,7 @@ namespace RafikiSecondarySchool
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnterMarksForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cboterm = new System.Windows.Forms.ComboBox();
             this.txtform = new System.Windows.Forms.TextBox();
             this.lblgrade = new System.Windows.Forms.TextBox();
             this.lbltotal = new System.Windows.Forms.TextBox();
@@ -82,7 +83,6 @@ namespace RafikiSecondarySchool
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cboterm = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -138,6 +138,18 @@ namespace RafikiSecondarySchool
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(989, 402);
             this.panel1.TabIndex = 1;
+            // 
+            // cboterm
+            // 
+            this.cboterm.FormattingEnabled = true;
+            this.cboterm.Items.AddRange(new object[] {
+            "Term1",
+            "Term2",
+            "Term3"});
+            this.cboterm.Location = new System.Drawing.Point(700, 77);
+            this.cboterm.Name = "cboterm";
+            this.cboterm.Size = new System.Drawing.Size(121, 33);
+            this.cboterm.TabIndex = 48;
             // 
             // txtform
             // 
@@ -758,18 +770,6 @@ namespace RafikiSecondarySchool
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // cboterm
-            // 
-            this.cboterm.FormattingEnabled = true;
-            this.cboterm.Items.AddRange(new object[] {
-            "Term 1",
-            "Term 2",
-            "Term 3"});
-            this.cboterm.Location = new System.Drawing.Point(700, 77);
-            this.cboterm.Name = "cboterm";
-            this.cboterm.Size = new System.Drawing.Size(121, 33);
-            this.cboterm.TabIndex = 48;
             // 
             // EnterMarksForm
             // 

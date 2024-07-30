@@ -129,11 +129,23 @@
     <Compile Include="AddAdmin.Designer.cs">
       <DependentUpon>AddAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Complain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Complain.Designer.cs">
+      <DependentUpon>Complain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard2.Designer.cs">
+      <DependentUpon>Dashboard2.cs</DependentUpon>
     </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -215,8 +227,14 @@
     <EmbeddedResource Include="AddAdmin.resx">
       <DependentUpon>AddAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Complain.resx">
+      <DependentUpon>Complain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard2.resx">
+      <DependentUpon>Dashboard2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EnterMarks.resx">
       <DependentUpon>EnterMarks.cs</DependentUpon>

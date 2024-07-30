@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace RafikiSecondarySchool
 {
     public partial class DashboardForm : Form
     {
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-4ROF1AO\SQLEXPRESS;Initial Catalog=School;Integrated Security=True");
+
+
         public DashboardForm(string username)
         {
             InitializeComponent();
@@ -75,27 +79,70 @@ namespace RafikiSecondarySchool
 
         private void DashboardForm_Load(object sender, EventArgs e)
         {
+            try
+            {
+                conn.Open();
 
+                // Retrieve hashed password from database
+                string query = "SELECT * FROM Complains";
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    lblName.Text = reader["Name"].ToString();
+                    lblDate.Text = reader["Date"].ToString();
+                    txtComplains.Text = reader["Complaint"].ToString();
+                }
+                else
+                {
+                    lblName.Text = "Record not found"; 
+                }
+
+                // Close the reader and the connection
+                reader.Close();
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (this.WindowState != FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
+            //if (this.WindowState != FormWindowState.Maximized)
+            //{
+            //    this.WindowState = FormWindowState.Maximized;
+            //}
+            //else
+            //{
+            //    this.WindowState = FormWindowState.Normal;
+            //}
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (this.WindowState != FormWindowState.Minimized)
-            {
-                this.WindowState = FormWindowState.Minimized;
-            }
+            //if (this.WindowState != FormWindowState.Minimized)
+            //{
+            //    this.WindowState = FormWindowState.Minimized;
+            //}
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AddAdminForm add = new AddAdminForm();
+            add.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ComplainForm complain = new ComplainForm();
+            complain.Show();
+            this.Hide();
         }
     }
 }

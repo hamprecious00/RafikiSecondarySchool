@@ -68,8 +68,6 @@ namespace RafikiSecondarySchool
             this.complimentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.view1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.schoolDataSet3 = new RafikiSecondarySchool.SchoolDataSet3();
-            this.btnexport = new System.Windows.Forms.Button();
-            this.btndownload = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.view1TableAdapter = new RafikiSecondarySchool.SchoolDataSet3TableAdapters.View1TableAdapter();
             this.panel1.SuspendLayout();
@@ -204,8 +202,6 @@ namespace RafikiSecondarySchool
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.Controls.Add(this.dtMarksSheet);
-            this.panel2.Controls.Add(this.btnexport);
-            this.panel2.Controls.Add(this.btndownload);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(0, 185);
             this.panel2.Name = "panel2";
@@ -444,36 +440,6 @@ namespace RafikiSecondarySchool
             this.schoolDataSet3.DataSetName = "SchoolDataSet3";
             this.schoolDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // btnexport
-            // 
-            this.btnexport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnexport.FlatAppearance.BorderSize = 0;
-            this.btnexport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnexport.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnexport.ForeColor = System.Drawing.Color.White;
-            this.btnexport.Location = new System.Drawing.Point(140, 421);
-            this.btnexport.Name = "btnexport";
-            this.btnexport.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnexport.Size = new System.Drawing.Size(182, 34);
-            this.btnexport.TabIndex = 5;
-            this.btnexport.Text = "Export To Excel";
-            this.btnexport.UseVisualStyleBackColor = false;
-            // 
-            // btndownload
-            // 
-            this.btndownload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btndownload.FlatAppearance.BorderSize = 0;
-            this.btndownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btndownload.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.btndownload.ForeColor = System.Drawing.Color.White;
-            this.btndownload.Location = new System.Drawing.Point(3, 421);
-            this.btndownload.Name = "btndownload";
-            this.btndownload.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btndownload.Size = new System.Drawing.Size(96, 34);
-            this.btndownload.TabIndex = 4;
-            this.btndownload.Text = "Download";
-            this.btndownload.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
@@ -532,8 +498,6 @@ namespace RafikiSecondarySchool
         private System.Windows.Forms.ComboBox cboform;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnselectdata;
-        private System.Windows.Forms.Button btnexport;
-        private System.Windows.Forms.Button btndownload;
         private SchoolDataSet3 schoolDataSet3;
         private System.Windows.Forms.BindingSource view1BindingSource;
         private SchoolDataSet3TableAdapters.View1TableAdapter view1TableAdapter;
