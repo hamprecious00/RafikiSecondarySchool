@@ -90,7 +90,8 @@ namespace RafikiSecondarySchool
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.cboterm);
             this.panel1.Controls.Add(this.txtform);
             this.panel1.Controls.Add(this.lblgrade);
@@ -134,19 +135,21 @@ namespace RafikiSecondarySchool
             this.panel1.Controls.Add(this.txtmath);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(1, 128);
+            this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Location = new System.Drawing.Point(23, 137);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(989, 402);
+            this.panel1.Size = new System.Drawing.Size(926, 393);
             this.panel1.TabIndex = 1;
             // 
             // cboterm
             // 
+            this.cboterm.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cboterm.FormattingEnabled = true;
             this.cboterm.Items.AddRange(new object[] {
             "Term1",
             "Term2",
             "Term3"});
-            this.cboterm.Location = new System.Drawing.Point(700, 77);
+            this.cboterm.Location = new System.Drawing.Point(664, 75);
             this.cboterm.Name = "cboterm";
             this.cboterm.Size = new System.Drawing.Size(121, 33);
             this.cboterm.TabIndex = 48;
@@ -156,8 +159,8 @@ namespace RafikiSecondarySchool
             this.txtform.BackColor = System.Drawing.Color.White;
             this.txtform.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtform.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtform.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txtform.Location = new System.Drawing.Point(535, 74);
+            this.txtform.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtform.Location = new System.Drawing.Point(499, 72);
             this.txtform.Multiline = true;
             this.txtform.Name = "txtform";
             this.txtform.ReadOnly = true;
@@ -169,8 +172,8 @@ namespace RafikiSecondarySchool
             this.lblgrade.BackColor = System.Drawing.Color.White;
             this.lblgrade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblgrade.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblgrade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblgrade.Location = new System.Drawing.Point(799, 238);
+            this.lblgrade.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblgrade.Location = new System.Drawing.Point(715, 238);
             this.lblgrade.Multiline = true;
             this.lblgrade.Name = "lblgrade";
             this.lblgrade.ReadOnly = true;
@@ -182,8 +185,8 @@ namespace RafikiSecondarySchool
             this.lbltotal.BackColor = System.Drawing.Color.White;
             this.lbltotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbltotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lbltotal.Location = new System.Drawing.Point(797, 136);
+            this.lbltotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbltotal.Location = new System.Drawing.Point(713, 136);
             this.lbltotal.Multiline = true;
             this.lbltotal.Name = "lbltotal";
             this.lbltotal.ReadOnly = true;
@@ -195,8 +198,8 @@ namespace RafikiSecondarySchool
             this.lblavg.BackColor = System.Drawing.Color.White;
             this.lblavg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblavg.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblavg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblavg.Location = new System.Drawing.Point(799, 185);
+            this.lblavg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblavg.Location = new System.Drawing.Point(715, 185);
             this.lblavg.Multiline = true;
             this.lblavg.Name = "lblavg";
             this.lblavg.ReadOnly = true;
@@ -208,8 +211,8 @@ namespace RafikiSecondarySchool
             this.lblcompliment.BackColor = System.Drawing.Color.White;
             this.lblcompliment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblcompliment.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcompliment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblcompliment.Location = new System.Drawing.Point(728, 319);
+            this.lblcompliment.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblcompliment.Location = new System.Drawing.Point(644, 319);
             this.lblcompliment.Multiline = true;
             this.lblcompliment.Name = "lblcompliment";
             this.lblcompliment.ReadOnly = true;
@@ -220,8 +223,8 @@ namespace RafikiSecondarySchool
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(723, 279);
+            this.label25.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label25.Location = new System.Drawing.Point(639, 279);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(111, 21);
             this.label25.TabIndex = 40;
@@ -231,8 +234,8 @@ namespace RafikiSecondarySchool
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(641, 76);
+            this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label24.Location = new System.Drawing.Point(605, 74);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(52, 21);
             this.label24.TabIndex = 38;
@@ -242,8 +245,8 @@ namespace RafikiSecondarySchool
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(477, 78);
+            this.label23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label23.Location = new System.Drawing.Point(441, 76);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(52, 21);
             this.label23.TabIndex = 36;
@@ -253,7 +256,7 @@ namespace RafikiSecondarySchool
             // 
             this.lblname.AutoSize = true;
             this.lblname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblname.ForeColor = System.Drawing.Color.White;
+            this.lblname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblname.Location = new System.Drawing.Point(157, 20);
             this.lblname.Name = "lblname";
             this.lblname.Size = new System.Drawing.Size(22, 21);
@@ -265,7 +268,7 @@ namespace RafikiSecondarySchool
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label16.Location = new System.Drawing.Point(6, 20);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(129, 21);
@@ -276,8 +279,8 @@ namespace RafikiSecondarySchool
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(713, 246);
+            this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label20.Location = new System.Drawing.Point(629, 246);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(72, 21);
             this.label20.TabIndex = 32;
@@ -287,8 +290,8 @@ namespace RafikiSecondarySchool
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(731, 187);
+            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label18.Location = new System.Drawing.Point(647, 187);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(52, 21);
             this.label18.TabIndex = 30;
@@ -298,8 +301,8 @@ namespace RafikiSecondarySchool
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(713, 138);
+            this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label15.Location = new System.Drawing.Point(629, 138);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(64, 21);
             this.label15.TabIndex = 28;
@@ -310,7 +313,7 @@ namespace RafikiSecondarySchool
             this.txtindexno.BackColor = System.Drawing.Color.White;
             this.txtindexno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtindexno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtindexno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtindexno.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtindexno.Location = new System.Drawing.Point(338, 70);
             this.txtindexno.Multiline = true;
             this.txtindexno.Name = "txtindexno";
@@ -321,7 +324,7 @@ namespace RafikiSecondarySchool
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label14.Location = new System.Drawing.Point(240, 75);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(88, 21);
@@ -333,7 +336,7 @@ namespace RafikiSecondarySchool
             this.txtadm.BackColor = System.Drawing.Color.White;
             this.txtadm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtadm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtadm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtadm.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtadm.Location = new System.Drawing.Point(148, 73);
             this.txtadm.Multiline = true;
             this.txtadm.Name = "txtadm";
@@ -344,7 +347,7 @@ namespace RafikiSecondarySchool
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label13.Location = new System.Drawing.Point(6, 75);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(121, 21);
@@ -356,7 +359,7 @@ namespace RafikiSecondarySchool
             this.txtict.BackColor = System.Drawing.Color.White;
             this.txtict.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtict.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtict.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtict.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtict.Location = new System.Drawing.Point(444, 319);
             this.txtict.MaxLength = 2;
             this.txtict.Multiline = true;
@@ -368,7 +371,7 @@ namespace RafikiSecondarySchool
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label12.Location = new System.Drawing.Point(398, 321);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(36, 21);
@@ -380,7 +383,7 @@ namespace RafikiSecondarySchool
             this.txteng.BackColor = System.Drawing.Color.White;
             this.txteng.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txteng.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txteng.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txteng.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txteng.Location = new System.Drawing.Point(78, 209);
             this.txteng.MaxLength = 2;
             this.txteng.Multiline = true;
@@ -392,7 +395,7 @@ namespace RafikiSecondarySchool
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label11.Location = new System.Drawing.Point(22, 209);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(45, 21);
@@ -404,7 +407,7 @@ namespace RafikiSecondarySchool
             this.txtbio.BackColor = System.Drawing.Color.White;
             this.txtbio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtbio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtbio.Location = new System.Drawing.Point(78, 321);
             this.txtbio.MaxLength = 2;
             this.txtbio.Multiline = true;
@@ -417,7 +420,7 @@ namespace RafikiSecondarySchool
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label10.Location = new System.Drawing.Point(30, 321);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(38, 21);
@@ -429,7 +432,7 @@ namespace RafikiSecondarySchool
             this.txtkis.BackColor = System.Drawing.Color.White;
             this.txtkis.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtkis.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtkis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtkis.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtkis.Location = new System.Drawing.Point(78, 271);
             this.txtkis.MaxLength = 2;
             this.txtkis.Multiline = true;
@@ -441,7 +444,7 @@ namespace RafikiSecondarySchool
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label9.Location = new System.Drawing.Point(15, 271);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(47, 21);
@@ -453,7 +456,7 @@ namespace RafikiSecondarySchool
             this.txtchem.BackColor = System.Drawing.Color.White;
             this.txtchem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtchem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtchem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtchem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtchem.Location = new System.Drawing.Point(265, 142);
             this.txtchem.MaxLength = 2;
             this.txtchem.Multiline = true;
@@ -465,7 +468,7 @@ namespace RafikiSecondarySchool
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label8.Location = new System.Drawing.Point(193, 144);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 21);
@@ -477,7 +480,7 @@ namespace RafikiSecondarySchool
             this.txtphy.BackColor = System.Drawing.Color.White;
             this.txtphy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtphy.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtphy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtphy.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtphy.Location = new System.Drawing.Point(265, 205);
             this.txtphy.MaxLength = 2;
             this.txtphy.Multiline = true;
@@ -489,7 +492,7 @@ namespace RafikiSecondarySchool
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(211, 211);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 21);
@@ -502,7 +505,7 @@ namespace RafikiSecondarySchool
             this.txtgeo.BackColor = System.Drawing.Color.White;
             this.txtgeo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtgeo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtgeo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtgeo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtgeo.Location = new System.Drawing.Point(265, 263);
             this.txtgeo.MaxLength = 2;
             this.txtgeo.Multiline = true;
@@ -514,7 +517,7 @@ namespace RafikiSecondarySchool
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(210, 265);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 21);
@@ -526,7 +529,7 @@ namespace RafikiSecondarySchool
             this.txtcre.BackColor = System.Drawing.Color.White;
             this.txtcre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtcre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtcre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtcre.Location = new System.Drawing.Point(265, 321);
             this.txtcre.MaxLength = 2;
             this.txtcre.Multiline = true;
@@ -538,7 +541,7 @@ namespace RafikiSecondarySchool
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(213, 323);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 21);
@@ -550,7 +553,7 @@ namespace RafikiSecondarySchool
             this.txthist.BackColor = System.Drawing.Color.White;
             this.txthist.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txthist.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txthist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txthist.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txthist.Location = new System.Drawing.Point(444, 142);
             this.txthist.MaxLength = 2;
             this.txthist.Multiline = true;
@@ -562,7 +565,7 @@ namespace RafikiSecondarySchool
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(397, 263);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 21);
@@ -574,7 +577,7 @@ namespace RafikiSecondarySchool
             this.txtagrics.BackColor = System.Drawing.Color.White;
             this.txtagrics.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtagrics.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtagrics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtagrics.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtagrics.Location = new System.Drawing.Point(444, 205);
             this.txtagrics.MaxLength = 2;
             this.txtagrics.Multiline = true;
@@ -586,7 +589,7 @@ namespace RafikiSecondarySchool
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(360, 207);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 21);
@@ -598,7 +601,7 @@ namespace RafikiSecondarySchool
             this.txtbs.BackColor = System.Drawing.Color.White;
             this.txtbs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbs.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtbs.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtbs.Location = new System.Drawing.Point(444, 262);
             this.txtbs.MaxLength = 2;
             this.txtbs.Multiline = true;
@@ -611,7 +614,7 @@ namespace RafikiSecondarySchool
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(386, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 21);
@@ -623,7 +626,7 @@ namespace RafikiSecondarySchool
             this.txtmath.BackColor = System.Drawing.Color.White;
             this.txtmath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtmath.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtmath.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtmath.Location = new System.Drawing.Point(78, 144);
             this.txtmath.MaxLength = 2;
             this.txtmath.Multiline = true;
@@ -636,7 +639,7 @@ namespace RafikiSecondarySchool
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(6, 146);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 21);
@@ -651,7 +654,7 @@ namespace RafikiSecondarySchool
             this.btnconfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnconfirm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnconfirm.ForeColor = System.Drawing.Color.White;
-            this.btnconfirm.Location = new System.Drawing.Point(348, 536);
+            this.btnconfirm.Location = new System.Drawing.Point(23, 536);
             this.btnconfirm.Name = "btnconfirm";
             this.btnconfirm.Size = new System.Drawing.Size(106, 34);
             this.btnconfirm.TabIndex = 29;
@@ -666,7 +669,7 @@ namespace RafikiSecondarySchool
             this.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnback.Font = new System.Drawing.Font("Segoe UI Semibold", 18.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnback.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnback.Location = new System.Drawing.Point(923, 0);
+            this.btnback.Location = new System.Drawing.Point(891, 12);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(67, 46);
             this.btnback.TabIndex = 16;
@@ -682,7 +685,7 @@ namespace RafikiSecondarySchool
             this.btnentermarks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnentermarks.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnentermarks.ForeColor = System.Drawing.Color.White;
-            this.btnentermarks.Location = new System.Drawing.Point(486, 536);
+            this.btnentermarks.Location = new System.Drawing.Point(175, 536);
             this.btnentermarks.Name = "btnentermarks";
             this.btnentermarks.Size = new System.Drawing.Size(106, 34);
             this.btnentermarks.TabIndex = 17;
@@ -698,7 +701,7 @@ namespace RafikiSecondarySchool
             this.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnclear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnclear.ForeColor = System.Drawing.Color.White;
-            this.btnclear.Location = new System.Drawing.Point(623, 536);
+            this.btnclear.Location = new System.Drawing.Point(331, 536);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(106, 34);
             this.btnclear.TabIndex = 28;
@@ -709,6 +712,7 @@ namespace RafikiSecondarySchool
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.btnback);
@@ -718,16 +722,17 @@ namespace RafikiSecondarySchool
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(990, 131);
+            this.panel2.Size = new System.Drawing.Size(970, 131);
             this.panel2.TabIndex = 29;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(787, 87);
+            this.dateTimePicker1.Location = new System.Drawing.Point(696, 87);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
             this.dateTimePicker1.TabIndex = 7;
             // 
             // label19
@@ -776,7 +781,7 @@ namespace RafikiSecondarySchool
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(990, 572);
+            this.ClientSize = new System.Drawing.Size(970, 572);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.panel1);
