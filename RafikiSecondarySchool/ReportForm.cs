@@ -24,40 +24,38 @@ namespace RafikiSecondarySchool
             InitializeComponent();
         }
 
-        private void label21_Click(object sender, EventArgs e)
-        {
+        private void label21_Click(object sender, EventArgs e){ }
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void label1_Click(object sender, EventArgs e){ }
 
         private void btngenerate_Click(object sender, EventArgs e)
         {
             try
             {
-                // Open the connection
-                conn.Open();
+                using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-4ROF1AO\SQLEXPRESS;Initial Catalog=School;Integrated Security=True"))
+                {
+                    // Open the connection
+                    conn.Open();
 
-                // Use parameterized query to prevent SQL injection
-                SqlCommand cmd = new SqlCommand(
-                    "SELECT * FROM View1 WHERE Admno = @Admno AND Term = @Term", conn);
-                cmd.Parameters.AddWithValue("@Admno", txtadm.Text);
-                cmd.Parameters.AddWithValue("@Term", cboterm.Text);
+                    // Use parameterized query to prevent SQL injection
+                    SqlCommand cmd = new SqlCommand(
+                        "SELECT * FROM View1 WHERE Admno = @Admno AND Term = @Term", conn);
+                    cmd.Parameters.AddWithValue("@Admno", txtadm.Text);
+                    cmd.Parameters.AddWithValue("@Term", cboterm.Text);
 
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
 
-                ReportDataSource rds = new ReportDataSource("DataSet1", dt);
-                reportViewer2.LocalReport.ReportPath = @"C:\Users\NURA\source\repos\RafikiSecondarySchool\RafikiSecondarySchool\Report1.rdlc";
-                reportViewer2.LocalReport.DataSources.Clear();
-                reportViewer2.LocalReport.DataSources.Add(rds);
-                reportViewer2.RefreshReport();
+                    ReportDataSource rds = new ReportDataSource("DataSet1", dt);
+                    reportViewer2.LocalReport.ReportPath = @"C:\Users\NURA\source\repos\RafikiSecondarySchool\RafikiSecondarySchool\Report1.rdlc";
+                    reportViewer2.LocalReport.DataSources.Clear();
+                    reportViewer2.LocalReport.DataSources.Add(rds);
+                    reportViewer2.RefreshReport();
 
-                MessageBox.Show("Report Generated Successfully");
+                    MessageBox.Show("Report Generated Successfully");
+                }
+                
             }
             catch (Exception ex)
             {
@@ -86,9 +84,6 @@ namespace RafikiSecondarySchool
             this.reportViewer2.RefreshReport();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        private void panel1_Paint(object sender, PaintEventArgs e){ }
     }
 }

@@ -21,9 +21,7 @@ namespace RafikiSecondarySchool
             InitializeComponent();
             lbluser.Text = username;
         }
-        public DashboardForm() : this("Guest")
-        {
-        }
+        public DashboardForm() : this("Guest"){ }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -36,13 +34,10 @@ namespace RafikiSecondarySchool
         {
             RegisterStudentForm r = new RegisterStudentForm();
             r.Show();
-            //this.Hide();
+            this.Hide();
         }
 
-        private void txtuser_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void txtuser_TextChanged(object sender, EventArgs e){ }
 
         private void btnmarksentry_Click(object sender, EventArgs e)
         {
@@ -72,10 +67,7 @@ namespace RafikiSecondarySchool
             this.Hide();
         }
 
-        private void lbluser_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void lbluser_Click(object sender, EventArgs e){ }
 
         private void DashboardForm_Load(object sender, EventArgs e)
         {
@@ -83,7 +75,6 @@ namespace RafikiSecondarySchool
             {
                 conn.Open();
 
-                // Retrieve hashed password from database
                 string query = "SELECT * FROM Complains";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
@@ -111,25 +102,9 @@ namespace RafikiSecondarySchool
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //if (this.WindowState != FormWindowState.Maximized)
-            //{
-            //    this.WindowState = FormWindowState.Maximized;
-            //}
-            //else
-            //{
-            //    this.WindowState = FormWindowState.Normal;
-            //}
-        }
+        private void button2_Click(object sender, EventArgs e){ }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //if (this.WindowState != FormWindowState.Minimized)
-            //{
-            //    this.WindowState = FormWindowState.Minimized;
-            //}
-        }
+        private void button1_Click(object sender, EventArgs e) { }
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -139,6 +114,13 @@ namespace RafikiSecondarySchool
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+            ComplainForm complain = new ComplainForm();
+            complain.Show();
+            this.Hide();
+        }
+
+        private void btnMore_Click(object sender, EventArgs e)
         {
             ComplainForm complain = new ComplainForm();
             complain.Show();

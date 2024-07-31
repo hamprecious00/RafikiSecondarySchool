@@ -73,10 +73,7 @@ namespace RafikiSecondarySchool
             txtcomplain.Text = string.Empty;
         }
 
-        private void lblmath_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void lblmath_Click(object sender, EventArgs e){ }
 
         private void btnterm1_Click(object sender, EventArgs e)
         {
@@ -120,9 +117,25 @@ namespace RafikiSecondarySchool
 
                     }
                     else
-                        {
-                            lblnotfound.Text = "Records not found!!!";
-                        }
+                    {
+                        lblnotfound.Text = "Records not found!!!";
+                        lblmath.Text = string.Empty;
+                        lbleng.Text = string.Empty;
+                        lblkis.Text = string.Empty;
+                        lblchem.Text = string.Empty;
+                        lblbio.Text = string.Empty;
+                        lblphy.Text = string.Empty;
+                        lblcre.Text = string.Empty;
+                        lblgeo.Text = string.Empty;
+                        lblhist.Text = string.Empty;
+                        lblagrics.Text = string.Empty;
+                        lblbusiness.Text = string.Empty;
+                        lblict.Text = string.Empty;
+                        lbltotal.Text = string.Empty;
+                        lblaverage.Text = string.Empty;
+                        lblgrade.Text = string.Empty;
+                        lblcompliment.Text = string.Empty;
+                    }
                     
                 }
             }
@@ -176,9 +189,25 @@ namespace RafikiSecondarySchool
                         
                     }
                     else
-                        {
-                            lblnotfound.Text = "Records not found!!!";
-                        }
+                    {
+                        lblnotfound.Text = "Records not found!!!";
+                        lblmath.Text = string.Empty;
+                        lbleng.Text = string.Empty;
+                        lblkis.Text = string.Empty;
+                        lblchem.Text = string.Empty;
+                        lblbio.Text = string.Empty;
+                        lblphy.Text = string.Empty;
+                        lblcre.Text = string.Empty;
+                        lblgeo.Text = string.Empty;
+                        lblhist.Text = string.Empty;
+                        lblagrics.Text = string.Empty;
+                        lblbusiness.Text = string.Empty;
+                        lblict.Text = string.Empty;
+                        lbltotal.Text = string.Empty;
+                        lblaverage.Text = string.Empty;
+                        lblgrade.Text = string.Empty;
+                        lblcompliment.Text = string.Empty;
+                    }
                     
                 }
             }
@@ -230,9 +259,25 @@ namespace RafikiSecondarySchool
 
                     }
                     else
-                        {
-                            lblnotfound.Text = "Records not found!!!";
-                        }
+                    {
+                        lblnotfound.Text = "Records not found!!!";
+                        lblmath.Text = string.Empty;
+                        lbleng.Text = string.Empty;
+                        lblkis.Text = string.Empty;
+                        lblchem.Text = string.Empty;
+                        lblbio.Text = string.Empty;
+                        lblphy.Text = string.Empty;
+                        lblcre.Text = string.Empty;
+                        lblgeo.Text = string.Empty;
+                        lblhist.Text = string.Empty;
+                        lblagrics.Text = string.Empty;
+                        lblbusiness.Text = string.Empty;
+                        lblict.Text = string.Empty;
+                        lbltotal.Text = string.Empty;
+                        lblaverage.Text = string.Empty;
+                        lblgrade.Text = string.Empty;
+                        lblcompliment.Text = string.Empty;
+                    }
                     
                 }
             }

@@ -92,31 +92,34 @@ namespace RafikiSecondarySchool
 
             try
             {
-                conn.Open();
-
-                // Retrieve hashed password from database
-                string query = "SELECT Password FROM Students WHERE Admno = @username";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@username", user);
-
-                string hashedPassword = cmd.ExecuteScalar() as string;
-
-                if(!string.IsNullOrEmpty(hashedPassword) && BCrypt.Net.BCrypt.Verify(pass, hashedPassword))
+                using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-4ROF1AO\SQLEXPRESS;Initial Catalog=School;Integrated Security=True"))
                 {
-                    // Login successful, open dashboard
-                    Dashboard2Form d2 = new Dashboard2Form(user);
-                    d2.Show();
-                    this.Hide();
+                    conn.Open();
+
+                    // Retrieve hashed password from database
+                    string query = "SELECT Password FROM Students WHERE Admno = @username";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@username", user);
+
+                    string hashedPassword = cmd.ExecuteScalar() as string;
+
+                    if (!string.IsNullOrEmpty(hashedPassword) && BCrypt.Net.BCrypt.Verify(pass, hashedPassword))
+                    {
+                        // Login successful, open dashboard
+                        Dashboard2Form d2 = new Dashboard2Form(user);
+                        d2.Show();
+                        this.Hide();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Username or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtusername.Clear();
+                        txtpassword.Clear();
+                        txtusername.Focus();
+                    }
 
                 }
-                else
-                {
-                    MessageBox.Show("Invalid Username or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtusername.Clear();
-                    txtpassword.Clear();
-                    txtusername.Focus();
-                }
-
             }
             catch(Exception ex)
             {

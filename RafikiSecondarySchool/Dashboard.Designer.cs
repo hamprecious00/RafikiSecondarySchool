@@ -276,6 +276,7 @@ namespace RafikiSecondarySchool
             this.btnMore.TabIndex = 13;
             this.btnMore.Text = "More?";
             this.btnMore.UseVisualStyleBackColor = false;
+            this.btnMore.Click += new System.EventHandler(this.btnMore_Click);
             // 
             // txtComplains
             // 

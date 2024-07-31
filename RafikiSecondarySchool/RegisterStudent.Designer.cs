@@ -210,6 +210,7 @@ namespace RafikiSecondarySchool
             this.btnnew.TabIndex = 17;
             this.btnnew.Text = "New";
             this.btnnew.UseVisualStyleBackColor = false;
+            this.btnnew.Click += new System.EventHandler(this.btnnew_Click);
             // 
             // dateofbirth
             // 
@@ -436,11 +437,12 @@ namespace RafikiSecondarySchool
             // txtpassword
             // 
             this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtpassword.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtpassword.Font = new System.Drawing.Font("Century Gothic", 16F);
             this.txtpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.txtpassword.Location = new System.Drawing.Point(149, 8);
             this.txtpassword.Multiline = true;
             this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '*';
             this.txtpassword.Size = new System.Drawing.Size(336, 32);
             this.txtpassword.TabIndex = 19;
             // 
